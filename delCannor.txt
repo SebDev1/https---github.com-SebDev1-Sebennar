@@ -1,0 +1,5 @@
+
+# WARNING: Will mess with institutions
+europe = {
+	destroy_province = yes
+}

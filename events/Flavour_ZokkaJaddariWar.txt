@@ -1,0 +1,6 @@
+
+namespace = zokka_jaddari_war
+
+
+		
+	

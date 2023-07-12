@@ -1,0 +1,16 @@
+
+# No previous file for Magua
+owner = 
+controller = 
+add_core = 
+culture = mteibhar
+religion = mazhthramazh
+capital = ""
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 1
+
+trade_goods = wool

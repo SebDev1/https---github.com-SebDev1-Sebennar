@@ -1,0 +1,66 @@
+
+country_decisions = {
+	khet_reformation_decision = {
+		potential = {
+			religion = khetist
+			culture_group = kheteratan
+			has_country_flag = faith_stabilized
+		}
+
+		
+		provinces_to_highlight = {
+			OR = {
+				province_id = 463 #Bulwar
+				province_id = 473 #Eduz-Vacyn
+				province_id = 475 #Azka-Sur
+				province_id = 479 #Azka-szel-Udam
+				province_id = 454 #Azka-szel-Azka
+			}
+			NOT = { owned_by = ROOT }
+		}
+
+		allow = {
+			is_at_war = no
+			is_subject = no
+			dip_power = 50
+			adm_power = 50
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 80
+			}
+			463 = { 
+				owned_by = root
+				religion = khetist
+			}
+			473 = { 
+				owned_by = root
+				religion = khetist
+			}
+			475 = { 
+				owned_by = root
+				religion = khetist
+			}
+			479 = { 
+				owned_by = root
+				religion = khetist
+			}
+			454 = { 
+				owned_by = root
+				religion = khetist
+			}
+			
+		}
+
+		effect = {
+			add_dip_power = -50
+			add_adm_power = -50
+			custom_tooltip = osc_centralization_started_tooltip
+			set_country_flag = osc_centralization_started
+			country_event = { id = bulwar_flavour.44 days = 365 }
+		}
+		
+		ai_will_do = {
+			factor = 1
+		}
+	}
+}

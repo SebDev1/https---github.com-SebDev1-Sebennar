@@ -1,0 +1,20 @@
+
+# No previous file for Tuintsundé
+owner = 
+controller = 
+add_core = 
+culture = mteibhar
+religion = mazhthramazh
+capital = ""
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 1
+
+trade_goods = iron
+
+latent_trade_goods = {
+	coal
+}

@@ -1,0 +1,4 @@
+
+serpentspine = {
+	destroy_province = yes
+}

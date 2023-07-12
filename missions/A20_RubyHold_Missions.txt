@@ -1,0 +1,1139 @@
+rubyhold_1 = {
+	slot = 1
+	generic = no
+	ai = yes
+	has_country_shield = yes
+	potential = {
+		tag = A20
+	}
+	
+	A20_dwarven_religious_policy = {
+		icon = mission_european_church
+		position = 1
+		
+		trigger = {
+			dynasty = Redstone
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = dwarven_traditions_path_tooltip
+					has_country_flag = dwarven_traditions_path
+				}
+				custom_trigger_tooltip = {
+					tooltip = new_faith_path_tooltip
+					has_country_flag = new_faith_path
+				}
+			}
+		}
+		
+		effect = {
+			if = {
+				limit = { has_country_flag = dwarven_traditions_path }
+				add_country_modifier = {
+					name = dwarven_traditions_modifier
+					duration = 3650
+				}
+			}
+			else_if = {
+				limit = { has_country_flag = new_faith_path }
+				add_country_modifier = {
+					name = new_faith_modifier
+					duration = 3650
+				}
+				add_prestige = 40
+			}
+		}
+	}
+	A20_first_branch_mission = {
+		icon = mission_unknown_mission
+		required_missions = { A20_dwarven_religious_policy }
+		position = 2
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = A20_traditions_triggers_tt
+					always = no
+				}
+				AND = {
+					religious_unity = 1
+					num_of_owned_provinces_with = {
+					value = 8
+					}
+					custom_trigger_tooltip = {
+						tooltip = dwarven_traditions_path_tooltip
+						has_country_flag = dwarven_traditions_path
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = A20_faith_triggers_tt
+					always = no
+				}
+				AND = {
+					religious_unity = 1
+					custom_trigger_tooltip = {
+						tooltip = new_faith_path_tooltip
+						has_country_flag = new_faith_path
+					}
+				}
+			}
+		}
+	
+	effect = {
+			if = {
+                limit = { has_country_flag = dwarven_traditions_path }
+                add_adm_power = 100
+                add_country_modifier = {
+                    name = dwarven_faith_expanded
+                    duration = 9125
+                }
+            }
+            
+            else = {
+                custom_tooltip = A20_faith_effects_tt
+                add_dip_power = 100
+                add_country_modifier = {
+                    name = a_community_we_enter
+                    duration = 9125
+                }
+            }
+		}
+}
+A20_second_branch_mission = {
+		icon = mission_unknown_mission
+		required_missions = { A20_first_branch_mission }
+		position = 3
+		trigger = {
+			custom_trigger_tooltip = {
+				tooltip = selectable_mission_trigger_tt
+			}
+			OR = {
+				custom_trigger_tooltip = {
+					tooltip = A20_traditions_triggers_tt
+					always = no
+				}
+				AND = {
+					religious_unity = 0.9
+					num_of_owned_provinces_with = {
+					value = 16
+					}
+					advisor = inquisitor
+					custom_trigger_tooltip = {
+						tooltip = dwarven_traditions_path_tooltip
+						has_country_flag = dwarven_traditions_path
+					}
+				}
+				custom_trigger_tooltip = {
+					tooltip = A20_faith_triggers_tt
+					always = no
+				}
+				AND = {
+					OR = {
+				emperor = {
+					has_opinion = {
+						who = ROOT
+						value = 150
+					}
+				}
+				is_emperor = yes
+				}
+					custom_trigger_tooltip = {
+						tooltip = new_faith_path_tooltip
+						has_country_flag = new_faith_path
+					}
+				}
+			}
+		}
+	
+	effect = {
+			if = {
+                limit = { has_country_flag = dwarven_traditions_path }
+                add_country_modifier = {
+                    name = ancestor_worhsip_reinforced
+                    duration = -1
+                }
+            }
+            
+            else = {
+                custom_tooltip = A20_faith_effects_tt
+                emperor = {
+				country_event = { id = flavor_rubyhold.6 } 
+				
+			}
+        }
+	}
+}
+	glass_hold = {
+		icon = mission_rb_central_belt_coal_mining
+		required_missions {
+			industrial_expansion
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 64
+			}
+		}
+		trigger = {
+			64 = {
+			development = 20
+			}
+			treasury = 1000
+			mil_power = 50
+			dip_power = 50
+			adm_power = 50
+		}
+		effect = {
+			add_treasury = -1000
+			add_mil_power = -50
+			add_dip_power = -50
+			add_adm_power = -50
+			add_country_modifier = {
+				name = glass_hold_benifits
+				duration = -1
+			}
+			64 = {
+			add_province_modifier = {
+					name = new_hold
+					duration = -1
+				}
+			change_trade_goods = glass
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	lorentish_industry = {
+		icon = mission_collect_yasak
+		required_missions {
+			glass_hold
+		}
+		pposition = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 59
+				province_id = 32
+				province_id = 33
+				province_id = 34
+				province_id = 40
+				
+			}
+		}
+		trigger = { share_of_starting_income = 12 
+				eastern_winebay_area = {
+				type = all
+				owned_by = ROOT
+			}
+			dip_power = 100
+		}
+		effect = {
+			add_dip_power = -100
+			add_country_modifier = {
+				name = human_relocation
+				duration = 5475
+			}
+			59 = {
+				add_province_modifier = {
+					name =  lorentish_plantations
+					duration = -1
+				}
+			}
+			
+			32 = {
+				add_province_modifier = {
+						name =  lorentish_plantations
+						duration = -1
+				}
+			}
+			33 = {
+				add_province_modifier = {
+					name =  lorentish_plantations
+					duration = -1
+				}
+			}
+			
+			34 = {
+				add_province_modifier = {
+						name =  lorentish_plantations
+						duration = -1
+				}
+			}
+			40 = {
+				add_province_modifier = {
+						name =  lorentish_plantations
+						duration = -1
+				}
+			}
+			64 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 } }
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = { province_has_center_of_trade_of_level = 3 }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+		}
+			
+	}
+}
+}
+Rubyhold_2 = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = A20
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	population_increase = {
+		icon = mission_unite_hindustan
+		position = 1
+		trigger = {
+			total_development = 100
+		}
+		effect = {
+			62 = {
+				add_province_modifier = {
+					name = capital_hold_renovations
+					duration = -1
+				}
+			}
+			
+		}
+	}
+	##Mission End
+	##Mission Start
+	refurbish_hold = {
+		icon = mission_conquer_50_development
+		required_missions {
+			population_increase
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 62
+			}
+		}
+		trigger = {
+			62 = {
+				development = 50
+				has_tax_building_trigger = yes
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = growing_economy
+				duration = 5475 #15 years
+			}
+			62 = {
+			add_province_modifier = {
+					name = rubyhold_government_buildings
+					duration = -1
+				}
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	industrial_expansion = {
+		icon = mission_industrialize_bengal
+		required_missions {
+			refurbish_hold
+		}
+		position = 3
+		trigger = { share_of_starting_income = 6 }
+		effect = {
+			add_country_modifier = {
+				name = dwarven_industrial_boom
+				duration = 9125 
+			}
+		}
+	}
+	##Mission End
+		##Mission Start
+	steel_hold = {
+		icon = mission_armoury
+		required_missions {
+			industrial_expansion
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 65
+			}
+		}
+		trigger = {
+			65 = {
+			development = 20
+			}
+			treasury = 1000
+			mil_power = 50
+			dip_power = 50
+			adm_power = 50
+		}
+		effect = {
+			add_treasury = -1000
+			add_mil_power = -50
+			add_dip_power = -50
+			add_adm_power = -50
+			add_country_modifier = {
+				name = steel_hold_benifits
+				duration = -1
+			}
+			65 = {
+			add_province_modifier = {
+					name = new_hold
+					duration = -1
+				}
+			change_trade_goods = iron
+			}
+			
+		}
+	}
+	##Mission End
+	##Mission Start
+	hafling_industry = {
+		icon = mission_secure_khandesh
+		required_missions {
+			steel_hold
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				province_id = 160
+				province_id = 161
+				province_id = 162
+				province_id = 164
+			}
+		}
+		trigger = { share_of_starting_income = 12 
+				the_borders_area = {
+				type = all
+				owned_by = ROOT
+			}
+			dip_power = 100
+		}
+		effect = {
+			add_dip_power = -100
+			add_country_modifier = {
+				name = hafling_relocation
+				duration = 5475
+			}
+			160 = {
+				add_province_modifier = {
+					name =  hafling_work_camps
+					duration = -1
+				}
+			}
+			
+			161 = {
+				add_province_modifier = {
+						name =  hafling_work_camps
+						duration = -1
+				}
+			}
+			162 = {
+				add_province_modifier = {
+					name =  hafling_work_camps
+					duration = -1
+				}
+			}
+			
+			164 = {
+				add_province_modifier = {
+						name =  hafling_work_camps
+						duration = -1
+				}
+			}
+			65 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 } }
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = { province_has_center_of_trade_of_level = 3 }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+			}
+			
+		}
+	}
+}
+Rubyhold_3 = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = A20
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	
+	dwarven_scouts = {
+		icon = mission_alone_in_the_wood
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = A40 }
+				A40 = { 
+					has_spy_network_from = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+			OR = {
+				NOT = { exists = A01 }
+				A01 = { 
+					has_spy_network_from = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+		}
+		effect = {
+			add_mil_power = 50
+			add_country_modifier = {
+				name = scout_maps
+				duration = 3650
+			}
+		}
+	}
+	
+	dwarven_legion = {
+		icon = mission_conquer_5_states
+		required_missions {
+			dwarven_scouts
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			army_size_percentage = 1
+			num_of_generals = 1
+			mil_tech = 4
+		}
+		effect = {
+			add_manpower = 5
+			add_country_modifier = {
+				name = dwarven_legion
+				duration = 7300
+			}
+			upper_bloodwine_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			exwes_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	
+	exwes_advance = {
+		icon = mission_potosi_silver
+		required_missions {
+			dwarven_legion
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = exwes_area
+			}
+		}
+		trigger = {
+			exwes_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			lorenans_reach_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			thomsbridge_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			the_borders_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			applefields_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	fall_smallcountry = {
+		icon = mission_rb_unite_the_clans
+		required_missions {
+			exwes_advance
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				area = thomsbridge_area
+				area = the_borders_area
+				area = applefields_area
+			}
+		}
+		trigger = {
+			thomsbridge_area = {
+				type = all
+				owned_by = ROOT
+			}
+			the_borders_area = {
+				type = all
+				owned_by = ROOT
+			}
+			applefields_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_country_modifier = {
+				name = hafling_conquest
+				duration = 9125
+			}
+			beepeck_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			
+		}
+	}
+	
+	beepeck_conquest = {
+		icon = mission_burning_castle
+		required_missions {
+			fall_smallcountry
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = beepeck_area
+			}
+		}
+		trigger = {
+			beepeck_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			151 = {
+				add_province_modifier = {
+						name =  great_dwarvish_tradeport
+						duration = -1
+				}
+			}
+			country_event = { id = flavor_rubyhold.2 }
+		}
+	}
+	
+	dwarven_ambition = {
+		icon = mission_empire
+		required_missions {
+			beepeck_conquest
+			subjugate_winelords
+		}
+		position = 6
+		provinces_to_highlight = {
+			OR = {
+				area = beepeck_area
+				area = upper_bloodwine_area
+			}
+		}
+		trigger = {
+			total_development = 700
+			beepeck_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_bloodwine_area = {
+				type = all
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			add_dip_power = 100
+			add_adm_power = 100
+			add_mil_power = 100
+			add_prestige = 25
+			wesdam_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			carneteria_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			windtower_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			woodwell_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			pearlywine_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			tretunica_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			neckcliffe_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			damespearl_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+}
+
+ Rubyhold_4 = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = A20
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	dwarven_emissary = {
+		icon = hand-picked_bureaucrats
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 308
+				province_id = 912
+			}
+		}
+		trigger = {
+		OR = {
+				NOT = { exists = A73 }
+				A73 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			define_advisor = {
+			
+				type = diplomat
+				skill = 2
+				cost_multiplier = 0.50
+				culture = ruby_dwarf
+				name = "Johan Blackston"
+			}
+		}
+	}
+	lorent_storm = {
+		icon = mission_crush_delhi
+		required_missions {
+			dwarven_legion
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				province_id = 67
+			}
+		}
+		trigger = {
+			owns = 67
+		}
+		effect = {
+			add_treasury = 500
+			add_mil_power = 100
+			A01 = {
+				country_event = { id = flavor_rubyhold.5 } 
+				
+			}
+			67 = { 
+				add_base_tax = -3
+				add_base_production = -3
+				add_base_manpower = -3
+				add_devastation = 50
+			}
+			62 = { 
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_human_minority_size_effect = yes
+			}
+			eastern_winebay_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_winebay_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			ionnidar_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	influence_winelords = {
+		icon = mission_restore_trade_superiority
+		required_missions {
+			lorent_storm
+			dwarven_politics
+		}
+		position = 4
+		provinces_to_highlight = {
+				province_id = 62
+			OR = {
+				NOT = { is_strongest_trade_power = ROOT }
+				NOT = {
+					trade_share = {
+						country = A20
+						share = 30
+					}
+				}
+			}
+			
+		}
+		trigger = {
+			62 = { is_strongest_trade_power = ROOT }
+			62 = {
+				trade_share = {
+					country = A20
+					share = 30
+				}
+			}
+			army_size = 50
+			
+		}
+		effect = {
+			add_casus_belli = {
+					target = A17
+					type = cb_vassalize_mission
+					months = 360
+				}
+			add_casus_belli = {
+					target = A15
+					type = cb_vassalize_mission
+					months = 360
+				}
+			add_casus_belli = {
+					target = A87
+					type = cb_vassalize_mission
+					months = 360
+				}
+				add_country_modifier = {
+				name = rubydwarf_charm
+				duration = 7300
+			}
+		}
+	}
+	
+	subjugate_winelords = {
+		icon = mission_build_up_to_force_limit
+		required_missions {
+			influence_winelords
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+			province_id = 75
+			province_id = 79
+			province_id = 114
+			province_id = 32
+			}
+		}
+		trigger = {
+			A17 = {
+				OR = {
+					AND = {
+						is_subject_of = ROOT
+						NOT = { liberty_desire = 50 }
+						NOT = { total_development = 100 }
+					}
+					NOT = { exists = yes }
+				}
+			}
+			A15 = {
+				OR = {
+					AND = {
+						is_subject_of = ROOT
+						NOT = { liberty_desire = 50 }
+						NOT = { total_development = 100 }
+					}
+					NOT = { exists = yes }
+				}
+			}
+			A87 = {
+				OR = {
+					AND = {
+						is_subject_of = ROOT
+						NOT = { liberty_desire = 50 }
+						NOT = { total_development = 100 }
+					}
+					NOT = { exists = yes }
+				}
+			}
+		}
+		effect = {
+			custom_tooltip = rubyhold_inherit_tt
+			hidden_effect = {
+				if = {
+					limit = { A17 = { is_subject_of = ROOT } }
+					inherit = A17
+				}
+			}
+			custom_tooltip = rubyhold_inherit_tt
+			hidden_effect = {
+				if = {
+					limit = { A15 = { is_subject_of = ROOT } }
+					inherit = A15
+				}
+			}
+			custom_tooltip = rubyhold_inherit_tt
+			hidden_effect = {
+				if = {
+					limit = { A87 = { is_subject_of = ROOT } }
+					inherit = A87
+				}
+			}
+		}
+	}
+	
+	steel_legions = {
+		icon = mission_integrate_the_purbias
+		required_missions {
+			subjugate_winelords
+			beepeck_conquest
+		}
+		position = 6
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			army_size = 100
+			mil_power = 200
+		}
+		effect = {
+			add_mil_power = -200
+			add_country_modifier = {
+				name = steel_legions
+				duration = -1
+			}
+			
+		}
+	}
+	##Mission End
+	##
+	
+}
+
+ Rubyhold_5 = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = A20
+		NOT = { map_setup = map_setup_random }
+	}
+	has_country_shield = yes
+	
+	gnomish_embassy = {
+		icon = hand-picked_bureaucrats
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 169
+			}
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = A06 }
+				A06 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+		}
+		effect = {
+			A06 = {
+				country_event = { id = flavor_rubyhold.3 } 
+				
+			}
+			A20 = {
+				country_event = { id = flavor_rubyhold.4 } 
+				
+			}
+		}
+	}
+	
+	dwarven_politics = {
+		icon = mission_establish_the_prikazy
+		required_missions {
+			gnomish_embassy
+			dwarven_emissary
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			dip_tech = 5
+			advisor = diplomat
+			dip_power = 50
+			adm_power = 50
+		}
+		effect = {
+			add_dip_power = -50
+			add_adm_power = -50
+			add_country_modifier = {
+				name = dwarven_politik
+				duration = -1
+			}
+			
+		}
+	}
+	
+}
+
+
+
+	

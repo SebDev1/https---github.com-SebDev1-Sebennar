@@ -1,0 +1,16 @@
+
+owner = 
+controller = 
+add_core = 
+tribal_owner = 
+culture = doosun
+religion = animism
+capital = ""
+
+hre = no
+
+base_tax = 2
+base_production = 3
+base_manpower = 1
+
+trade_goods = unknown

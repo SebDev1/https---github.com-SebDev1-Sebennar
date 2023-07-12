@@ -1,0 +1,241 @@
+namespace = flavor_rubyhold
+
+#Gronmar choosing what faith to accept
+country_event = {
+	id = flavor_rubyhold.1
+	title = flavor_rubyhold.1.t
+	desc = flavor_rubyhold.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+	
+	trigger = {
+		tag = A20
+		
+		dynasty = "Redstone"
+		
+		NOT = { is_year = 1500 }
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	#Holdfast to Ancestor Worhsip
+	option = {
+		name = flavor_rubyhold.1.a
+		
+		set_ruler_religion = ancestor_worship
+		set_heir_religion = ancestor_worship
+		
+		add_prestige = 20
+		custom_tooltip = dwarven_traditions_tooltip
+		
+		every_country = {
+			limit = {
+				capital_scope = { region = west_dameshead_region }
+				primary_culture = west_damerian
+			}
+			add_opinion = { who = ROOT modifier = A04_laurens_rejected_west_damerian }
+		}
+		hidden_effect = { 
+			set_country_flag = dwarven_traditions_path
+			swap_non_generic_missions = yes
+		}
+	}
+	
+	#Embrace the new fath
+	option = {
+		name = flavor_rubyhold.1.b
+		
+		custom_tooltip = new_faith_tooltip
+		set_ruler_religion = regent_court
+		set_heir_religion = regent_court
+		change_religion = regent_court
+		
+		add_manpower = 2
+		
+		every_country = {
+			limit = {
+				capital_scope = { region = lencenor_region }
+				primary_culture = high_lorentish
+			}
+			add_opinion = { who = ROOT modifier = A04_laurens_rejected_high_lorentish }
+		}
+		hidden_effect = { 
+			set_country_flag = new_faith_path
+			swap_non_generic_missions = yes
+		}
+		ai_chance = {
+			factor = 1
+		}
+	}
+
+}
+
+country_event = { #Halflings of Beepeck
+	id = flavor_rubyhold.2
+	title = flavor_rubyhold.2.t
+	desc = flavor_rubyhold.2.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = { #Halflings can stay
+			name = "flavor_rubyhold.2.a" 
+			add_adm_power = 100
+			medium_increase_of_halfling_tolerance_effect = yes
+			151 = { add_base_tax = 1 }
+			
+	}
+	option = { #Halflings must be removed
+			name = "flavor_rubyhold.2.b"
+			add_adm_power = -100
+			medium_decrease_of_halfling_tolerance_effect = yes	
+			151 = {
+				change_religion = ROOT
+				change_culture = ruby_dwarf
+				add_province_modifier = {
+					name = dwarvish_coastal_city
+					duration = -1
+				}
+				add_base_tax = -5
+				add_base_production = -5
+				add_base_manpower = -5
+				add_devastation = 50
+			}
+			65 = { 
+				add_base_tax = 2
+				add_halfling_minority_size_effect = yes
+			}
+			64 = { 
+				add_base_tax = 2
+				add_halfling_minority_size_effect = yes
+			}
+			62 = { 
+				add_base_tax = 2
+				add_halfling_minority_size_effect = yes
+			}
+	}
+}
+
+country_event = { #Scholars of Rubyhold
+	id = flavor_rubyhold.3
+	title = flavor_rubyhold.3.t
+	desc = flavor_rubyhold.3.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = { #Let the Artisans in
+			name = "flavor_rubyhold.3.a" 
+			medium_increase_of_dwarven_tolerance_effect = yes
+			add_dip_power = -100
+			add_country_modifier = {
+			name = dwarven_artisans
+			duration = -1
+		}
+			
+	}
+	option = { #We don't trust any Dwarves
+			name = "flavor_rubyhold.3.b"
+			add_dip_power = 100
+	}
+}
+
+country_event = { #Scholars of Nimscodd
+	id = flavor_rubyhold.4
+	title = flavor_rubyhold.4.t
+	desc = flavor_rubyhold.4.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = { #Let the Scholars in
+			name = "flavor_rubyhold.4.a" 
+			medium_increase_of_gnomish_tolerance_effect = yes
+			add_dip_power = -100
+			add_country_modifier = {
+			name = gnomish_scholars
+			duration = -1
+		}
+			
+	}
+	option = { #We don't trust any Gnomes
+			name = "flavor_rubyhold.4.b"
+			add_dip_power = 100
+	}
+}
+
+country_event = { #Lorentish Instability
+	id = flavor_rubyhold.5
+	title = flavor_rubyhold.5.t
+	desc = flavor_rubyhold.5.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = { #The Nation Cracks
+			name = "flavor_rubyhold.5.a" 
+			add_treasury = -500
+			add_country_modifier = {
+			name = national_strife
+			duration = 5475
+		}
+			
+	}
+}
+
+country_event = { #Rubyhold in the empire
+	id = flavor_rubyhold.6
+	title = flavor_rubyhold.6.t 
+	desc = flavor_rubyhold.6.d 
+	picture = HRE_eventPicture
+	is_triggered_only = yes
+
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_rubyhold.6.a 
+		
+		ai_chance = { factor = 10 } 
+		A20 = { 
+			set_in_empire = yes 
+		}
+	}
+	
+	option = {
+		name = flavor_rubyhold.6.b 
+		
+		ai_chance = { factor = 0 } 
+	}
+}

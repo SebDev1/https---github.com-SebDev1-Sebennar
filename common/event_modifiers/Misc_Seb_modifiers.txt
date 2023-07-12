@@ -1,0 +1,26 @@
+
+
+EscannScaler = {
+	land_forcelimit = 5
+	global_manpower = 5 
+	global_tax_income = 48
+	
+
+}
+ScalerHammer = {
+global_colonial_growth = 30 
+}
+
+adjacent_fort_penalty = {
+	local_defensiveness = -2.50
+}
+RuleBreaker = {
+inflation_reduction = -1
+}
+RuleBreakerMarch = { 
+manpower_recovery_speed = -0.20
+land_morale = -0.20
+discipline = -0.05 
+land_maintenance_modifier = 0.40
+}
+

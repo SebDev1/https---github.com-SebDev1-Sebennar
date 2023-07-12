@@ -1,0 +1,22 @@
+
+new_tunnel_modifier = {
+	local_colonial_growth = -1000
+}
+depleted_ruby_mine_modifier = {
+	trade_goods_size = -0.5
+}
+tungr_port = {
+	local_sailors_modifier = 0.25
+	
+}
+tunnel_orcs = {
+	local_great_project_upgrade_cost = -0.1
+}
+tunnel_dwarves = {
+	local_development_cost = -0.1
+}
+easy_passage_to_silent = {
+	local_development_cost = -0.1
+	trade_goods_size = 0.5
+}
+	

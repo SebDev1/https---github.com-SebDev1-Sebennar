@@ -1,0 +1,18 @@
+
+owner = 
+controller = 
+add_core = 
+tribal_owner = 
+culture = doos
+religion = animism
+capital = ""
+
+hre = no
+
+base_tax = 2
+base_production = 1
+base_manpower = 2
+
+trade_goods = slaves
+
+center_of_trade = 1

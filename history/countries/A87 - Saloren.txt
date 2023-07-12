@@ -1,0 +1,25 @@
+
+setup_vision = yes
+government = monarchy
+add_government_reform = feudalism_reform
+government_rank = 1
+primary_culture = roilsardi
+religion = regent_court
+technology_group = tech_cannorian
+capital = 32 # Saloren
+
+
+1000.1.1 = { set_estate_privilege = estate_mages_organization_magisterium }
+
+1422.1.2 = { set_country_flag = is_a_county }
+1440.1.1 = {
+	monarch = {
+		name = "Ruben"
+		dynasty = "sil Roilsard"
+		#this one is fun so it's going in Tellum's namelist too
+		adm = 4
+		dip = 5
+		mil = 4
+		female = yes
+		birth_date = 1419.5.5
+	}

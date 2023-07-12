@@ -1,0 +1,170 @@
+﻿l_english:
+ 
+ #Busilar
+ a29_copper_mines:0 "Busilari Copper Mines"
+ a29_khenak_fortifications: "Khenak Fortifications"
+ a29_modern_busilari_arsenal: "Modern Busilari Arsenal"
+ a29_busilari_security_concerns: "Busilari Security Concerns"
+ a29_southern_lion: "Southern Lion"
+ a29_eastern_lion: "Eastern Lion"
+ a29_northern_lion: "Northern Lion"
+ a29_highcliff_fisheries: "Highcliff Fisheries"
+ a29_surrounded: "Surrounded On All Sides"
+ a29_verne_crown: "The Crown of Verne"
+ vernish_integration: "Integrating Verne"
+ 
+ 
+ A29_secure_highlands_title:0 "Move to Secure Highlands"
+ A29_secure_highlands_desc:0 "Busilar is naturally defendable with high mountains shielding our northern reaches, while the great Divenhal Sea protects our southern flank. In an ideal world this fact of geography would lead to its natural conclusion, but alas that is not true. Tens of thousands' of gnolls occupy the western slope of the Khenak mountains, and perpetually raid our heartland. This gaping wound in are armor must be sealed, and for that King Marcan prepares to march. "
+ A29_northern_diplomacy_title:0 "Northern Diplomacy"
+ A29_northern_diplomacy_desc:0 "With Busilars position now secured, we must look North to the other civilized nations of Cannor for our diplomatic in-roads. For too long Busilar has been a southern facing civilization, that now revolves around a culture that is decaying. We shall instead turn our gaze North."
+ A29_imperial_entrance_title:0 "Imperial Entrance"
+ A29_imperial_entrance_desc:0 "Strong ties have been established with the northern states, as-well as a smattering of diplomatic arrangements that have pulled Busilar even further into the Cannorian world. It is time to officially transition, and petion the Emporer to lets us join into the Empire of Anbennar."
+ A29_verne_question_title:0 "Verne Question"
+ A29_verne_question_desc:0 "Verne our Eastern neighbor has with our ascension into the Empire found its position seriously threatened by us. They have reason to worry as the western side of the Khenak mountains have always been rightful Busilari clay, and it seems that the empure may agree with us."
+ a29_verne_integration_title:0 "Integration of Verne"
+ a29_verne_integration_desc:0 "The kingdom of Verne, through our military defeats and cunning diplomatic manuevering has finally submitted to our dominion. Now it is time to bind the Kingdom of Verne to its natural homeland of Busilar."
+ 
+ A29_acceptance_effects_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YAcceptance Path§!, the following effects will occur:"
+ A29_rejection_effects_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YRejection Path§!, the following effects will occur:"
+ A29_acceptance_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YAcceptance Path§!, the following triggers will be needed to complete this mission:"
+ A29_rejection_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YRejection Path§!, the following triggers will be needed to complete this mission:"
+ 
+ rubyhold_inherit_tt:0 "Busilar will inherit Verne"
+ 
+ flavor_busilar.1.t:0 "Busilar in the Empire"
+ flavor_busilar.1.d:0 "The Southern Kingdom of Busilar has petition us to formally join the Empire of Anbennar. Do we accept; some warn they have ambitions on Verne, which being in the empire could help them exploit. Others warn that the once naval focused nation has in recent years built up a sizeable army, and it would be best to appease the stone lion?"
+ flavor_busilar.1.a:0 "Let the Southern Kingdom join us"
+ flavor_busilar.1.b:0 "Keep the beast away from our Empire"
+ 
+ flavor_busilar.2.t:0 "Emporer Rejected Us"
+ flavor_busilar.2.d:0 "The Emporer has after all of our work, spat in the face of years of Busilari diplomacy. This slight shall not be forgotten and it is time for the kingdom to face the Northern threat."
+ flavor_busilar.2.a:0 "Prepare for the worst"
+ 
+ flavor_busilar.3.t:0 "Emporer Has Invited Us"
+ flavor_busilar.3.d:0 "Busilar the great stone lion and largest of the Southern Cannorian kingdoms has been accepted into the Empire of Anbennar."
+ flavor_busilar.3.a:0 "Prepare for the best"
+ 
+ flavor_busilar.4.t:0 "Vernish Integration"
+ flavor_busilar.4.d:0 "With all Verne now submitting to the kings of Busilar, it is time to restructure the administration of the new territory to make sure it follows the commands of Hapaine."
+ flavor_busilar.4.a:0 "Bind them"
+ 
+ 
+ #Verne
+ A33_fill_title:0 "Verne Fill"
+ A33_fill_desc:0 "Need a mission here in order for Verne not to get a portion of the new generic mission tree."
+ 
+ #Command
+ R62_fill_title:0 "Command Fill"
+ R62_fill_desc:0 "Need a mission here in order for Verne not to get a portion of the new generic mission tree."
+ R62_fill_1_title:0 "Command Fill"
+ R62_fill_1_desc:0 "Need a mission here in order for Verne not to get a portion of the new generic mission tree."
+ 
+ #Kheterata
+ army_recovery: "Army Recovery"
+ elven_salt_mine: "Elven Salt Mine"
+ khet_mint: "New Mint"
+ bulwar_trade_disruption: "Disrupting Bulwars Trade"
+ bulwar_trade_domination: "Dominating Bulwars Trade"
+ hold_the_line: "Hold The Line"
+ faith_stabilized: "Faith Stabilized"
+ khet_tolerance: "Khetist Tolerance"
+ khet_collapse: "Collapse of Kheterata"
+ U01_fortify_core:0 "Will upgrade all 3 highlighted forts by one level."
+ camel_calvary: "Camel Calvary"
+ elephant_calvary: "Elephant Calvary"
+ U01_pop_gain: "Growing Population"
+ U01_khet_grain: "Kheteratan Grain"
+ U01_desert_mines: "Desert Mines"
+ U01_monuement_elikhet: "Elikhet Monuement"
+ U01_rebuilding: "Rebuilding Akan"
+ U01_scourge: "Scourge the Sea-Scourge"
+ U01_influx_gnolls: "Influx of Gnollish Workers"
+ 
+ flavor_khet.5.t:0 "Question of Elizna"
+ flavor_khet.5.d:0 "The Sun-elf kingdom of Elizna has finally secumb to our might of arms and has fallen. This will be end of hundreds of years of Sun-elf rule over Salahad. Now a question has arrisen over what do with the Sun-elf minority, inhabiting the island of Elizna."
+ flavor_khet.5.a:0 "Deport the Sun-elves"
+ flavor_khet.5.b:0 "Cleanse the island"
+ 
+ flavor_khet.6.t:0 "Gold Mines of Gnollakaz"
+ flavor_khet.6.d:0 "The upper banks of the Mother Sorrow have been restored to rightful Kheterat rule. With this restoraction comes access to the old gold mines of the area. A lot of money can be had from extracting this gold, the question is how do we manage it?"
+ flavor_khet.6.a:0 "Re-open abonded mine"
+ flavor_khet.6.b:0 "Establish a new gold mint"
+ 
+ flavor_khet.7.t:0 "Stabilizing the Khetist Faith"
+ flavor_khet.7.d:0 "The High priest of Kheterata has been crushed after his failed rebellion. He led a group of outsiders, downtrodden, and nobles who were chafing under our Kingly rule. The old office of High Priest cannot go back to what it once was, for fears of undermining the monarchy. We must"
+ flavor_khet.7.a:0 "Combine the role of King and High Priest into one"
+ flavor_khet.7.b:0 "Decentralize and Liberalize the Faith"
+ 
+ flavor_khet.8.t:0 "Collapse of Kheterata"
+ flavor_khet.8.d:0 "The people are in open revolt led by the second most important figure in Kheteratan society, the High Priest. In-stability rules the land, while the land and people are being devastated. In order to curb this national decline we must crush the Nirat rebellion, and reform the Khetist faith away from the High Priest."
+ flavor_khet.8.a:0 "Shit"
+ 
+ flavor_khet.9.t:0 "Gnollish Question"
+ flavor_khet.9.d:0 "The Gnolls of Eastern Irsmahapan have been subjegated, now do we should show these hyenas kindness, or should we treat them they way they have treated mankind."
+ flavor_khet.9.a:0 "Me no like dog people, but they make good workers."
+ flavor_khet.9.b:0 "FUCK dog people"
+ 
+ flavor_khet.10.t:0 "Control of Akan"
+ flavor_khet.10.d:0 "The region of Akan is a devasted waste land from decades of Gnollish occuptation. Cities lie barren while small towns are constantly attacked by the remenanents of the Viakkoc. Do we focus on rebuilding the cities of Akan, or do we attempt to drive out these remenanent Gnolls?"
+ flavor_khet.10.a:0 "Rebuild Akan"
+ flavor_khet.10.b:0 "Scourge the Sea-Scourge"
+ 
+ flavor_khet.11.t:0 "Magic trapped beneath the desert"
+ flavor_khet.11.d:0 "Magic as old as humanity lies in the sands of Salahad. We have known of its existances for centuries, but the extraction of this theoretical magic proved much harder than what the Bulwari's had. Fortunately for us we know have the facilities and expertise to unlock the magic that has always been here."
+ flavor_khet.11.a:0 "Let mana flow from the ground"
+ flavor_khet.11.b:0 "Make the ruler into the form of Khet "
+ 
+ kheterata_regain_southern_kheterata_title:0 "Regain Southern Kheterata"
+ kheterata_regain_southern_kheterata_desc:0 "The great city of Golkora, the second largest settlement in Kheterata is under Gnollish occupation. We must liberate our second great city, and restore our territorial integrity. 
+ 
+ kheterata_conquer_irsmahapan_title:0 "Liberate the Irsmahapan"
+ kheterata_conquer_irsmahapan_desc:0 "The Irsmahapan people live to the South of the traditional Khet homeland, but they are still our very close cousians. We cannot allow for their continued abuse by the Gnolls of Gnollakaz, and so we must liberate them, and there gold mines ;|"
+ U01_control_brasan_title:0 "Control the Bay of Brasan"
+ U01_control_brasan_desc:0 "The Bay of Brasan lies to the North of Salahad, and is the main arty of trade for most of interior Bulwar. With control over this strategic water way an economic hegamony can begin to be established."
+ U01_seize_bulwari_trade_title:0 "Seize Bulwari Trade"
+ U01_seize_bulwari_trade_desc:0 "With most of coastal Bulwar being under our direct or indirect control and with a powerful fleet, we can begin taxing and regulating most of the trade flowing from East to West. This will make our kingdom and people, insanely wealthy."
+ U01_war_survival_title:0 "War of Survival"
+ U01_war_survival_desc:0 "Kheterata is surrounded on all sides by enemies. To the North lie the domineering sun elves, to the South lies the great Gnollish kingdom, to the west lies the sea-scourge, and finally in the center of our domain the Khetarch is rebelling. In order for a nation to maintain its freedom, we must fight till the end.
+ U01_stabilize_the_faith_title:0 "Stabilize the Faith"
+ U01_stabilize_the_faith_desc:0 "Our religious structure was built around an alliance between the High Priest, Khetarch, and the King. With this triple alliance being shattered by the Nirat rebellion, a new religous narrative must be established and all descent must go."
+ U01_delta_defense_title:0 "Defence of the Delta"
+ U01_delta_defense_desc:0 "The entirety of our kingdom lies upon the Mother Sorrow and its great delta. While this provides us a great wealth of food and a massive population, it provides us no natural defensive barrier. In order to secure our state from future Gnollish or Elvish attacks we must build our own manmade fortifications."
+ U01_camel_cavalry_title:0 "Camel Calvary Corp"
+ U01_camel_cavalry_desc:0 "With our position in the Sarhal desert, traditional calvary that uses horses is impracticul as they have a hard time surviving in the desert heat. We should look back to the traditions of the Crodamos family to know that we need a strong calvary force of camels to defend our empire."
+ U01_elephant_integration_title:0 "Elite Elephant Gunners"
+ U01_elephant_integration_desc:0 "Fire arms have become more and more widespread across the armies of Cannor and Bulwar. Specifically cannons are of interest for us with their ability to crush defenses and lay waste to armies from far away. And with our access to the vast Savannas of Sarhal we have just the creature to pull our cannons, the elephant."
+ kheterata_bread_basket_title:0 "Kheteratan Bread Basket"
+ kheterata_bread_basket_desc:0 "The delta of the mother sorrow is called the bread-basket of Cannor. Thousands of tons of grain each year are harvested and processed before leaving the port of Koroshesh. This is the life blood of the Kheteratan economy, and now with new modern infanstructure being built up and down the Mother Sorrow it will soon become the life blood of the Global economy."
+ U01_desert_prospecting_title:0 "Desert Prospecting"
+ U01_desert_prospecting_desc:0 "The nation of Kheterata is an agricultural society situated almost entirely along the banks of the Mother Sorrow with little else but desert surrounding us. We can produce lots of food and other agricultural commodities, but other raw materials we sorely lack. In order to build up a modern economy more resources are needed and the Salahad desert as terrible of a place it is, is the area where we will find these raw materials."
+ U01_gnolls_gol_title:0 "Gnolls of Gol"
+ U01_gnolls_gol_desc:0 "The Gnollish kingdom of Gnollakaz has been destroyed, and we are now in possession of what many consider to be the homeland of the Gnolls Gol. This is a place of savannas intersperced by low mountain ranges, that is the first place South of the Salahad desert that can maintain life. Should we open this land up for Kheteratan settlement or should we attempt to reorganize the Gnollish tribes to serve the Khet?"
+ U01_magic_title:0 "The Magic of Kheterata"
+ U01_magic_desc:0 "Magic as old as humanity lies in the sands of Salahad. We have known of its existances for centuries, but the extraction of this theoretical magic proved much harder than what the Bulwari's had. Fortunately for us we know have the facilities and expertise to unlock the magic that has always been here"
+ U01_administer_gol_title:0 "Administer Gol"
+ U01_administer_gol_desc:0 "Gol has been fully Khetized by our great nation, it is time to recall the war heros and savor in the spoils."
+ 
+ khet_reformation_decision_title: "Khetist Reformation"
+ khet_reformation_decision_desc: "The High Priest no longer exists, what system of organization do we want for our restructured faith?"
+ 
+ U01_gnoll_accept_effects_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YAcceptance Path§!, the following effects will occur:"
+ U01_gnoll_purge_effects_tt:0 "\nIf §Y[Root.GetName]§! chooses the §Purge Path§!, the following effects will occur:"
+ 
+ U01_gnoll_accept_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YAcceptance Path§!, the following triggers will be needed to complete this mission:"
+ U01_gnoll_purge_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YPurge Path§!, the following triggers will be needed to complete this mission:"
+ 
+ U01_plantgrowth_tt:0 "All grain provinces currently owned by Kheterata will gain a small production increase"
+ 
+ #Telgier
+ telgier_professional_armies:0 "Professional Armies of Telgier"
+ 
+ #Nimscodd
+ A79_rebuild_oddansbay_modifier:0 "The Great Rebuilding Effort"
+ 
+ #Istralor
+ A45_national_integration:0 "National Integration"
+ A45_dale_iron_mines:0 "Dale Iron Mines"
+ A45_marshal_empire:0 "Marshal of The Empire"
+ A45_commanders:0 "Istalori Commanders"
+ A45_corinite_emporer:0 "Corinite Emporer"

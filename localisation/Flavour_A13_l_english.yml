@@ -1,0 +1,56 @@
+﻿l_english:
+ 
+ A13_bulwark_fortifications: "Bulwark Fortifications"
+ A13_trade_gateway: "Access to Dameshead"
+ A13_fur_bonus: "Advanced hunting methods"
+ A13_northern_expansion: "Northern Expansion"
+ A13_damescrown_loan: "Forced Damescrown Loan"
+ A13_industrialization: "Gawed Industrialization"
+ A13_faster_integration: "Faster Integration"
+ A13_end_elven_dominance: "End Elven Dominance"
+ A13_orc_dominion: "Our Orc Domain"
+ A13_national_unrest: "National Unrest"
+ A13_alenic_resistance: "Alenic Resistance"
+ A13_alenic_resolve: "Alenic Resolve"
+ 
+ 
+ A13_hunting_tt:0 "All fur provinces you own will gain a small production buff"
+ 
+ flavor_gawed.103.t:0 "Celmaldor is ours"
+ flavor_gawed.103.d:0 "The only elven settlement North of the Empire has just fallen into our hands. Celmaldor is a major trading hub, and the population is hostile to us due to our views on huamn supremacy. Nevertheless the city must be open for trade and so its local population needs to get out of our way."
+ flavor_gawed.103.a:0 "Deport the Elves and sieze there belongings"
+ 
+ flavor_gawed.104.t:0 "Resettlement of Vrorenmarch"
+ flavor_gawed.104.d:0 "The area known as Vrorenmarch has finally come under the control of humans, for the first time in decades. The Orcs of this land have been gently persuaded to leave and now we need to figure out who will resettle this new territory."
+ flavor_gawed.104.a:0 "Let the Reachmen re-enter their homes"
+ flavor_gawed.104.b:0 "Gawedi's First"
+ 
+ flavor_gawed.105.t:0 "Triumph of the Alenics"
+ flavor_gawed.105.d:0 "The people of Alen have always been the hardiest of the Cannorian peoples. Living so far North the growing season is short and danger is ever lurking. Despite this disadvantage our people are in a state ascendance, we have beaten back the Orcs, Trolls, and Barbarains of the North and now lay claim to one of the greatiest realms in all of Halan. This is the moment of triumph Gawed has always seeked, and we have achieved it. "
+ flavor_gawed.105.a:0 "Alenic Superiority"
+ flavor_gawed.105.b:0 "Alenic Superiority"
+ 
+ A13_push_south_title:0 "Push South"
+ A13_push_south_desc:0 "The road to the great Elven forest is open, we must seize this opportunity and march!"
+ A13_eagle_crest_title:0 "Eagle Crest"
+ A13_eagle_crest_desc:0 "The dragonhills are the only place in Cannor that Gawedi people exist outside of Gawed. While in the past this was fine new threats have been emerging, such as vertesk and the hierachy. Therefore for our peoples continued safety we must bring this rugged territory back into the fold."
+ A13_core_land_title:0 "Core Land"
+ A13_core_land_desc:0 "Our northern lands have been slowly scrapped away by the up and coming Alenics of Adshaw. Weak kings have been unable to stop this slow loss, and now Adshaw has gone from a tiny castle to a formidable dutchy. Nevertheless a new monarch has finally ascended the throne, one much less keen to lose Gaweds land."
+ A13_prepare_the_strike_title:0 "Prepare the Strike"
+ A13_prepare_the_strike_desc:0 "The nation of Frozenmaw has emerged from the Greentide as a powerful monsterous state on the eastern side of the Alenic Reach. This nation is a threat to all Alenic peoples and so it is time to strike it down."
+ A13_banish_greyorc_title:0 "Banish the Grey Orcs"
+ A13_banish_greyorc_desc:0 "All of the Alenic reach is know uder our control, with the people of Frozenmaw being forced into the North Wastes, and Eastern Forts. Let us of Alen rejoice in this great victory."
+ A13_consolidate_eastern_reach_title:0 "Consolidate the Eastern Reach"
+ A13_consolidate_eastern_reach_desc:0 "With Grombar defeated, the humans of the Gerudian Coast have one group at a time fallen into our orbit and eventually into our domain."
+ A13_alenic_triumph_title:0 "Alenic Triumph"
+ A13_alenic_triumph_desc:0 "All people of Alen, today our state is ascendant over all of the North. A time of prosperity is to be upon us."
+ 
+ A13_settlement_tt:0 "The reachmen will be greatly displeased."
+ 
+ 
+#Adshaw
+ Z26_return_king: "Return of the King"
+ 
+ 
+
+ 

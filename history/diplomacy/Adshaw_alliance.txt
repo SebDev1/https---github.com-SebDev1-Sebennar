@@ -1,0 +1,6 @@
+vassal = {
+	first = Z26
+	second = Z33
+	start_date = 1438.1.1
+	end_date = 1500.1.1
+}

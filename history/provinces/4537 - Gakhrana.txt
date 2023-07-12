@@ -1,0 +1,21 @@
+
+# No previous file for Banten
+owner = R63
+controller = R63
+add_core = R63
+add_core = R80
+add_core = R79
+culture = brown_orc
+religion = old_dookan
+
+hre = no
+
+base_tax = 1
+base_production = 1
+base_manpower = 1
+
+trade_goods = incense
+
+capital = ""
+
+is_city = yes

@@ -1,0 +1,5 @@
+
+every_province = {
+	limit = { NOT = { continent = europe } }
+	destroy_province = yes
+}

@@ -1,0 +1,608 @@
+###Busilar
+
+namespace = flavor_TPG
+namespace = flavor_rubyhold
+
+#Will Busilar be able to join the empire
+country_event = {
+	id = flavor_busilar.1
+	title = flavor_busilar.1.t
+	desc = flavor_busilar.1.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	#Let Busilar in
+	option = {
+		name = flavor_busilar.1.a
+		
+
+		add_prestige = 25
+		add_dip_power = 50
+		
+		ai_chance = { factor = 10 } 
+		A29 = { 
+			country_event = { id = flavor_busilar.3 } 
+			set_in_empire = yes 
+		}
+	}
+	
+	#Reject the stone Lion
+	option = {
+		name = flavor_busilar.1.b
+		
+		add_prestige = -25
+		add_dip_power = -50
+		
+		A29 = {
+				country_event = { id = flavor_busilar.2 } 
+			}
+		
+		ai_chance = { factor = 0 } 
+	}
+
+}
+
+#Busilar stands alone
+country_event = {
+	id = flavor_busilar.2
+	title = flavor_busilar.2.t
+	desc = flavor_busilar.2.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_busilar.2.a
+		custom_tooltip =  A29_rejection_tooltip
+		add_mil_power = 100
+		add_country_modifier = {
+				name = a29_surrounded
+				duration = 7300
+			}
+			
+			hidden_effect = { 
+			set_country_flag =  A29_rejection_path
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#Busilar stands united
+country_event = {
+	id = flavor_busilar.3
+	title = flavor_busilar.3.t
+	desc = flavor_busilar.3.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_busilar.3.a
+		custom_tooltip = A29_acceptance_tooltip
+		add_dip_power = 100
+		add_prestige = 25
+		
+		hidden_effect = { 
+			set_country_flag = A29_acceptance_path
+			swap_non_generic_missions = yes
+		}
+	}
+}
+
+#Busilar stands united
+country_event = {
+	id = flavor_busilar.4
+	title = flavor_busilar.4.t
+	desc = flavor_busilar.4.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_busilar.4.a
+			290 = {
+				change_religion = ROOT
+				change_culture = busilari
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			291 = {
+				change_religion = ROOT
+				change_culture = busilari
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			838 = {
+				change_religion = ROOT
+				change_culture = busilari
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			288 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			289 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			292 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			293 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			283 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			286 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			285 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			331 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+			561 = { 
+				add_province_modifier = {
+					name = vernish_integration
+					duration = -1
+				}
+			}
+		
+	}
+}
+
+#Kheterata
+country_event = { #Sun Elves of Elizna
+	id = flavor_khet.5
+	title = flavor_khet.5.t
+	desc = flavor_khet.5.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = { #send them to them to the mines
+			name = flavor_khet.5.a
+			medium_decrease_of_elven_tolerance_effect = yes
+			465 = {
+				add_base_production = 4
+				add_base_manpower = 2
+				change_religion = ROOT
+				change_culture = sun_elf
+				add_province_modifier = {
+					name = elven_salt_mine
+					duration = -1
+				}
+			}
+			494 = {
+				add_base_tax = -1
+				add_base_production = -2
+				add_base_manpower = -1
+				change_religion = ROOT
+				change_culture = kheteratan
+			}
+			496 = {
+				add_base_tax = -1
+				add_base_production = -2
+				add_base_manpower = -1
+				change_religion = ROOT
+				change_culture = kheteratan
+			}
+	}
+	option = { #eradicate them
+			name = flavor_khet.5.b
+			medium_decrease_of_elven_tolerance_effect = yes	
+			494 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+				change_religion = ROOT
+				change_culture = kheteratan
+			}
+			496 = {
+				add_base_tax = -2
+				add_base_production = -2
+				add_base_manpower = -2
+				change_religion = ROOT
+				change_culture = kheteratan
+			}
+			475 = { 
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_elven_minority_size_effect = yes
+			}
+			465 = { 
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_elven_minority_size_effect = yes
+			}
+			464 = { 
+				add_base_tax = 1
+				add_base_production = 1
+				add_base_manpower = 1
+				add_elven_minority_size_effect = yes
+			}
+	}
+}
+
+country_event = { #Exploiting the Gold of Gnollakaz
+	id = flavor_khet.6
+	title = flavor_khet.6.t
+	desc = flavor_khet.6.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_khet.6.a
+		486 = {
+		change_trade_goods = gold
+		}
+		
+	}
+	
+	option = {
+		name = flavor_khet.6.b
+		add_treasury = 250
+		add_country_modifier = {
+				name = khet_mint
+				duration = -1
+			}
+		
+	}
+}
+
+country_event = { #Stabilizing the Khetist Faith
+	id = flavor_khet.7
+	title = flavor_khet.7.t
+	desc = flavor_khet.7.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_khet.7.a
+		add_government_reform = dajashti_hierocracy_reform
+	}
+	
+	option = {
+		name = flavor_khet.7.b
+		set_country_flag = faith_stabilized
+		add_country_modifier = {
+				name = khet_tolerance
+				duration = -1
+			}
+		
+	}
+}
+
+country_event = { #Kheterata Nearing Collapse
+	id = flavor_khet.8
+	title = flavor_khet.8.t
+	desc = flavor_khet.8.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = U01
+		is_at_war = yes
+	}
+	
+	mean_time_to_happen = {
+		months = 1
+	}
+	
+	option = {
+		name = flavor_khet.8.a
+		add_stability = -1
+		add_country_modifier = {
+				name = khet_collapse
+				duration = -1
+			}
+			474 = {
+			add_devastation = 30
+		}
+			472 = {
+			add_devastation = 30
+		}
+			473 = {
+			add_devastation = 50
+		}
+			6088 = {
+			add_devastation = 30
+		}
+			471 = {
+			add_devastation = 30
+		}
+			469 = {
+			add_devastation = 30
+		}
+			468 = {
+			add_devastation = 30
+		}
+			464 = {
+			add_devastation = 30
+		}
+			467 = {
+			add_devastation = 30
+		}
+	}
+	
+}
+
+country_event = { #Gnollish Question
+	id = flavor_khet.9
+	title = flavor_khet.9.t
+	desc = flavor_khet.9.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	fire_only_once = yes
+
+	trigger = {
+		tag = U01
+		479 = { 
+			owned_by = ROOT
+		}
+		487 = { 
+			owned_by = ROOT
+		}
+		5676 = { 
+			owned_by = ROOT
+		}
+		5475 = { 
+			owned_by = ROOT
+		}
+	}
+	
+	mean_time_to_happen = {
+		months = 12
+	}
+	
+	option = {
+		name = flavor_khet.9.a
+		custom_tooltip = U01_gnoll_accept_tooltip
+		medium_increase_of_gnollish_tolerance_effect = yes
+		hidden_effect = { 
+			set_country_flag = U01_gnoll_accept_path
+			swap_non_generic_missions = yes
+		}
+		
+	}
+	
+	option = {
+		name = flavor_khet.9.b
+		custom_tooltip = U01_gnoll_purge_tooltip
+		medium_decrease_of_gnollish_tolerance_effect = yes
+		hidden_effect = { 
+			set_country_flag = U01_gnoll_purge_path
+			swap_non_generic_missions = yes
+		}
+		
+	}
+	
+}
+
+country_event = { #Akan Control
+	id = flavor_khet.10
+	title = flavor_khet.10.t
+	desc = flavor_khet.10.d
+	picture = GOOD_WITH_MONARCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_khet.10.a
+			385 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			384 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			400 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			403 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			382 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			404 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			405 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+			381 = {
+				add_province_modifier = {
+					name = U01_rebuilding
+					duration = 7300
+				}
+			}
+	}
+	
+	option = {
+		name = flavor_khet.10.b
+		add_country_modifier = {
+				name = U01_scourge
+				duration = 3650
+			}
+			385 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+			384 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+			400 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+			395 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+			396 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+			383 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+			401 = {
+				change_religion = ROOT
+				change_culture = desha
+			}
+		
+	}
+}
+
+country_event = { #Kheteratan Magic
+	id = flavor_khet.11
+	title = flavor_khet.11.t
+	desc = flavor_khet.11.d
+	picture = ST_PETERS_CHURCH_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+		name = flavor_khet.11.a
+		custom_tooltip = U01_plantgrowth_tt
+		every_owned_province = {
+				if = {
+					limit = {
+						trade_goods = grain
+					}
+					add_province_modifier = { 
+						name = U01_grain_bonus_prod
+						duration = -1
+						hidden = yes
+					}
+				}
+			}
+		
+	}
+	
+	option = {
+		name = flavor_khet.11.b
+		clear_ruler_personalities = yes
+		add_ruler_personality = mage_personality
+		
+		hidden_effect = {
+		set_ruler_flag = transmutation_3 set_ruler_flag = transmutation_2 set_ruler_flag = transmutation_1
+		set_ruler_flag = illusion_1 
+		set_ruler_flag = enchantment_1
+		}
+	}
+}

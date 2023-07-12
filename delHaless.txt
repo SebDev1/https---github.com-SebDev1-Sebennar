@@ -1,0 +1,4 @@
+
+asia = {
+	destroy_province = yes
+}

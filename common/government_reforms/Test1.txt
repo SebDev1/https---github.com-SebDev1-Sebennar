@@ -1,0 +1,83 @@
+free_republic_reform = {
+	icon = "ambrosian_republic"
+    potential = {
+        OR = {
+			tag = A25
+		}
+    }
+    legacy_equivalent = ambrosian_republic_legacy
+	valid_for_nation_designer = no
+	modifiers = {
+		trade_efficiency = 0.15
+		republican_tradition = 0.3
+		merchants = 1
+	}
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = yes
+	}
+	duration = 4
+}
+
+clstc_oligarchy = {
+	icon = "trading_city"
+	allow_normal_conversion = yes
+	modifiers = {
+		max_absolutism = 40
+		merchants = 1
+		global_trade_goods_size_modifier = 0.10
+		candidate_random_bonus = 1
+	}
+	valid_for_nation_designer = no
+	legacy_equivalent = venetian_merchant_republic
+	potential = {
+        OR = {
+			tag = A25
+		}
+    }
+	boost_income = yes
+	factions = {
+		mr_aristocrats
+		mr_traders
+		mr_guilds
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			NOT = { has_dlc = "Mare Nostrum" }
+		}
+		can_use_trade_post = yes
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Mare Nostrum"
+			NOT = { has_dlc = "Res Publica" }
+		}
+		can_form_trade_league = yes
+		trade_city_reform = trading_city
+	}
+	conditional = {
+		allow = {
+			has_dlc = "Res Publica"
+			has_dlc = "Mare Nostrum"
+		}
+		can_use_trade_post = yes
+		can_form_trade_league = yes
+	}
+	custom_attributes = {
+		enables_plutocratic_idea_group = yes
+		enables_aristocratic_idea_group = yes
+		lottery_election = yes
+		election_on_death = yes
+		elections_increase_factions_influence = yes
+		bonus_stats_for_elected_ruler = yes
+	}
+	has_term_election = no
+}
+
+

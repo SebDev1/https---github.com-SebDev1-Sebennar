@@ -1,0 +1,459 @@
+#Shinukhorchi, The Highest Fire (Azjakuma)
+azjakuma_shinukhorchi_the_highest_fire = {
+	start = 5430
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_azjakuma
+					OR = {
+						culture = horned_ogre
+						AND = {
+							has_owner_religion = yes
+							religion = lefthand_path
+						}
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_azjakuma
+					OR = {
+						culture = horned_ogre
+						AND = {
+							has_owner_religion = yes
+							religion = lefthand_path
+						}
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}	
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_development_cost = -0.05
+		}
+		country_modifiers = {
+			shinukhorchi_loyalty_modifier = 0.025
+			all_estate_influence_modifier = 0.025
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.2
+			local_hostile_attrition = 0.5
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_development_cost = -0.075
+		}
+		country_modifiers = {
+			max_absolutism = 5
+			shinukhorchi_loyalty_modifier = 0.05
+			all_estate_influence_modifier = 0.05
+		}
+		on_upgraded = {
+			define_advisor = {
+				type = court_mage
+				skill = 3
+				culture = root
+				religion = root
+				location = 5430
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.33
+			local_hostile_attrition = 1
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_defender_dice_roll_bonus = 1
+			local_development_cost = -0.1
+		}
+		country_modifiers = {
+			max_absolutism = 10
+			shinukhorchi_loyalty_modifier = 0.1
+			all_estate_influence_modifier = 0.1
+		}
+		on_upgraded = {
+			owner = {
+				take_estate_land_share_gigantic = { estate = all }
+			}
+		}
+	}
+}
+#Ajgriijarul, The Bright Claw (Azjakuma)
+azjakuma_ajgriijarul_the_bright_claw = {
+	start = 4829
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 1
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_azjakuma
+					OR = {
+						culture = horned_ogre
+						AND = {
+							has_owner_religion = yes
+							religion = lefthand_path
+						}
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_azjakuma
+					OR = {
+						culture = horned_ogre
+						AND = {
+							has_owner_religion = yes
+							religion = lefthand_path
+						}
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_development_cost = -0.05
+			local_defensiveness = 0.1
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			infantry_shock = 0.01
+			ajgriijarul_loyalty_modifier = 0.025		
+		}
+		on_upgraded = {
+			add_base_manpower = 1
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_development_cost = -0.1
+			local_defensiveness = 0.2
+			local_hostile_attrition = 0.5
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			infantry_shock = 0.02
+			ajgriijarul_loyalty_modifier = 0.05
+			ajgriijarul_influence_modifier = 0.025		
+		}
+		on_upgraded = {
+			add_base_manpower = 2
+			owner = {
+				define_general = {
+					name = "Akira Kavari"
+					trait = defensive_planner_personality
+					fire = 4
+					shock = 8
+					manuever = 4
+					siege = 2
+				}
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_development_cost = -0.15
+			local_defensiveness = 0.33
+			local_hostile_attrition = 1
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+		}
+		country_modifiers = {
+			infantry_shock = 0.05
+			leader_land_shock = 1
+			ajgriijarul_loyalty_modifier = 0.1
+			ajgriijarul_influence_modifier = 0.05
+		}
+		on_upgraded = {
+			add_base_manpower = 3
+			owner = {
+				add_country_modifier = {
+					name = azjakuma_ajgriijarul_the_bright_claw_fearsome_oni_warriors
+					duration = 730
+				}
+			}
+		}
+	}
+}
+#Hubao, The Tiger Fortress
+hubao_the_tiger_fortress = {
+	start = 4901
+	date = 01.01.01
+	time = {
+		months = 0
+	}
+	build_cost = 0
+	can_be_moved = no
+	move_days_per_unit_distance = 1
+	starting_tier = 0
+	type = monument
+	build_trigger = {	
+	}
+	on_built = {		
+	}
+	on_destroyed = {	
+	}
+	can_use_modifiers_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_hubao_the_tiger_fortress
+					OR = {
+						culture_group = yan
+						culture = east_harimari
+						culture = horned_ogre
+						culture_group = hobgoblin
+						culture_group = wuhyun
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	can_upgrade_trigger = {
+		AND = {
+			custom_trigger_tooltip = {
+				tooltip = halessi_monuments_can_use_tooltip_hubao_the_tiger_fortress
+					OR = {
+						culture_group = yan
+						culture = east_harimari
+						culture = horned_ogre
+						culture_group = hobgoblin
+						culture_group = wuhyun
+					}
+			}
+			province_is_or_accepts_culture = yes
+		}
+	}
+	keep_trigger = {
+	}
+	tier_0 = {
+		upgrade_time = {
+			months = 0
+		}
+		cost_to_upgrade = {
+			factor = 0
+		}
+		province_modifiers = {
+		}
+		area_modifier = {
+		}
+		country_modifiers = {	
+		}
+		on_upgraded = {
+		}
+	}
+	tier_1 = {
+		upgrade_time = {
+			months = 120
+		}
+		cost_to_upgrade = {
+			factor = 1000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.15
+			local_hostile_attrition = 1
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_garrison_size = 0.1
+			supply_limit_modifier = 0.15
+			local_fort_maintenance_modifier = -0.15
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+		}
+	}
+	tier_2 = {
+		upgrade_time = {
+			months = 240
+		}
+		cost_to_upgrade = {
+			factor = 2500
+		}
+		province_modifiers = {
+			local_defensiveness = 0.25
+			local_hostile_attrition = 1.5
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_garrison_size = 0.2
+			supply_limit_modifier = 0.3
+			local_fort_maintenance_modifier = -0.3
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			define_advisor = {
+				type = fortification_expert
+				name = "Kabaneri of the Tiger Fortress"
+				skill = 3
+				culture = root
+				religion = root
+				location = 4901
+				cost_multiplier = 0.25
+			}
+		}
+	}
+	tier_3 = {
+		upgrade_time = {
+			months = 480
+		}
+		cost_to_upgrade = {
+			factor = 5000
+		}
+		province_modifiers = {
+			local_defensiveness = 0.5
+			local_hostile_attrition = 2
+		}
+		area_modifier = {
+		}
+		region_modifier = {
+			local_garrison_size = 0.33
+			supply_limit_modifier = 0.5
+			local_fort_maintenance_modifier = -0.5
+		}
+		country_modifiers = {
+		}
+		on_upgraded = {
+			add_permanent_province_modifier = {
+				name = hubao_the_tiger_fortress_invincible_fortress
+				duration = 27375
+			}
+		}
+	}
+}

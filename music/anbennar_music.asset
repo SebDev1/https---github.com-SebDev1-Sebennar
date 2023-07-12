@@ -1,0 +1,20 @@
+music = {
+	name = "remnant_awakening_dwarves"
+	file = "remnant_awakening_dwarves.ogg"
+}
+music = {
+	name = "maintheme"
+	file = "maintheme.ogg"
+}
+music = {
+	name = "dusk_of_an_empire"
+	file = "dusk_of_an_empire.ogg"
+}
+music = {
+	name = "in_the_wake"
+	file = "in_the_wake.ogg"
+}
+music = {
+	name = "Deioderan"
+	file = "Deioderan.ogg"
+}

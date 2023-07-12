@@ -1,0 +1,29 @@
+
+#223 - Granada |
+
+owner = Z26
+controller = Z26
+add_core = Z26
+culture = gawedi
+religion = regent_court
+
+hre = no
+
+base_tax = 3
+base_production = 3
+base_manpower = 2
+
+trade_goods = fur
+
+capital = ""
+
+is_city = yes
+
+
+
+
+
+
+
+
+

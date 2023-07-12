@@ -1,0 +1,3 @@
+forbidden_lands_superregion = {
+	destroy_province = yes
+}

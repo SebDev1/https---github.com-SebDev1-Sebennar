@@ -1,0 +1,15 @@
+
+owner = I25
+controller = I25
+add_core = I25
+culture = malachite_dwarf
+religion = ancestor_worship
+trade_goods = serpentbloom
+hre = no
+base_tax = 1 
+base_production = 2
+base_manpower = 1
+latent_trade_goods = {
+	coal
+}
+
