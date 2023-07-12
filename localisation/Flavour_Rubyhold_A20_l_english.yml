@@ -73,6 +73,7 @@
  A20_faith_triggers_tt:0 "\nIf §Y[Root.GetName]§! chooses the §YFaith Path§!, the following triggers will be needed to complete this mission:"
  
  rubyhold_inherit_tt:0 "Rubyhold will inherit these countries if they are a subject."
+ rubyhold_integrate_tt:0 "Rubyhold will inherit these countries if they are a subject."
  
  glass_hold_title:0 "Glass Hold"
  glass_hold_desc:0 "The grape fields of Lorent have always been bountiful, providing ample wine to the many peoples of Cannor. This wine for many years was crude, however in recent decades new more refined vintages have been created. These superior vintages can be ruined easily when put in common containers. Steril glass is needed to help transport this valuable liquid, and we Dwarves are just the people to provide it. "

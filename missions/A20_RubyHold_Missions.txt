@@ -970,14 +970,13 @@ Rubyhold_3 = {
 		position = 5
 		provinces_to_highlight = {
 			OR = {
-			province_id = 75
+			province_id = 101
 			province_id = 79
-			province_id = 114
-			province_id = 32
+			province_id = 108
 			}
 		}
 		trigger = {
-			A17 = {
+			A16 = {
 				OR = {
 					AND = {
 						is_subject_of = ROOT
@@ -997,7 +996,7 @@ Rubyhold_3 = {
 					NOT = { exists = yes }
 				}
 			}
-			A87 = {
+			A18 = {
 				OR = {
 					AND = {
 						is_subject_of = ROOT
@@ -1009,25 +1008,25 @@ Rubyhold_3 = {
 			}
 		}
 		effect = {
-			custom_tooltip = rubyhold_inherit_tt
+			custom_tooltip = rubyhold_integrate_tt
 			hidden_effect = {
 				if = {
-					limit = { A17 = { is_subject_of = ROOT } }
-					inherit = A17
+					limit = { A16 = { is_subject_of = ROOT } }
+					inherit = A16
 				}
 			}
-			custom_tooltip = rubyhold_inherit_tt
+			custom_tooltip = rubyhold_integrate_tt
 			hidden_effect = {
 				if = {
 					limit = { A15 = { is_subject_of = ROOT } }
 					inherit = A15
 				}
 			}
-			custom_tooltip = rubyhold_inherit_tt
+			custom_tooltip = rubyhold_integrate_tt
 			hidden_effect = {
 				if = {
-					limit = { A87 = { is_subject_of = ROOT } }
-					inherit = A87
+					limit = { A18 = { is_subject_of = ROOT } }
+					inherit = A18
 				}
 			}
 		}
