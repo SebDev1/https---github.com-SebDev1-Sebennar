@@ -532,11 +532,11 @@ renovated_capital = {
 }
 
 renovated_capital_2 = {
-	local_development_cost = -0.30
-	local_tax_modifier = 0.50
-	trade_goods_size = 0.75
-	local_manpower_modifier = 0.3
-	province_trade_power_modifier = 0.25
+	local_development_cost = -0.25
+	local_tax_modifier = 0.75
+	trade_goods_size = 0.50
+	local_manpower_modifier = 0.25
+	province_trade_power_modifier = 0.10
 }
 	
 
@@ -548,7 +548,7 @@ new_scholars = {
 permanent_peasant_levies = {
 	global_manpower = 5
 	global_tax_income = 24
-	land_forcelimit	= 5
+	land_forcelimit	= 3
 }
 
 efficient_taxation = {
