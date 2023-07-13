@@ -391,7 +391,6 @@ U07_column_3 = {
 			OR = {
 				area = deshak_area
 				area = akan_mountains_area
-				area = hapak_area
 			}
 		}
 		trigger = {
@@ -400,10 +399,6 @@ U07_column_3 = {
 				owned_by = ROOT
 			}
 			akan_mountains_area = {
-				type = all
-				owned_by = ROOT
-			}
-			hapak_area = {
 				type = all
 				owned_by = ROOT
 			}
