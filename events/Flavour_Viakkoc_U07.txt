@@ -253,6 +253,10 @@ country_event = { #Throne of Kheterata
 
 	}
 	
+	mean_time_to_happen = {
+		months = 3
+	}
+	
 	option = { #Integrate the Administration
 			name = "flavor_viakkoc.4.a" 
 			add_adm_power = 100
@@ -283,6 +287,10 @@ country_event = { #Occupation of Kheterata
 	trigger = {
 		#mission
 
+	}
+	
+	mean_time_to_happen = {
+		months = 3
 	}
 	
 	option = { #Prepare for the next Conquest
@@ -321,6 +329,10 @@ country_event = { #Humans of Kheterata
 	trigger = {
 		#mission
 
+	}
+	
+	mean_time_to_happen = {
+		months = 3
 	}
 	
 	option = { #Tame with Fire

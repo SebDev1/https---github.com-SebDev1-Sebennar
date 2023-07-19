@@ -391,12 +391,12 @@ khet_collapse = {
 }
 
 camel_calvary = {
-	cav_to_inf_ratio = 0.15
+	cav_to_inf_ratio = 0.10
 	cavalry_cost = -0.15
 }
 
 elephant_calvary = {
-	cav_to_inf_ratio = 0.25
+	cav_to_inf_ratio = 0.15
 	cavalry_cost = -0.15
 	cavalry_fire = 0.5
 }
