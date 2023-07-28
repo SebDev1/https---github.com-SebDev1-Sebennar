@@ -1,0 +1,367 @@
+namespace = flavor_redglades
+
+country_event = { #Lorent expansion decision
+	id = flavor_redglades.1
+	title = flavor_redglades.1.t
+	desc = flavor_redglades.1.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #Claim the capital
+			name = "flavor_redglades.1.a"
+			upper_bloodwine_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			70 = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_core = ROOT
+			}
+			74 = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_core = ROOT
+			}
+			67 = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_core = ROOT
+			}
+	}
+	
+	option = { #Claim the country
+			name = "flavor_redglades.1.b"
+			upper_bloodwine_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			ionnidar_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			thomsbridge_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			roysfort_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+			southroy_area = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+	}
+}
+
+country_event = { #Venail resettlement
+	id = flavor_redglades.2
+	title = flavor_redglades.2.t
+	desc = flavor_redglades.2.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #reseetlement
+			name = "flavor_redglades.2.a"
+			hidden_effect = {
+			93 = {
+				change_religion = ROOT
+				change_culture = sorncosti
+				add_base_tax = -4
+				add_base_production = -4
+				add_base_manpower = -4
+			}
+			94 = {
+				change_religion = ROOT
+				change_culture = low_lorentish
+				add_base_tax = -4
+				add_base_production = -4
+				add_base_manpower = -4
+			}
+			127 = {
+				change_religion = ROOT
+				change_culture = high_lorentish
+				add_base_tax = -4
+				add_base_production = -4
+				add_base_manpower = -4
+			}
+			119 = {
+				change_religion = ROOT
+				change_culture = moon_elf
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			115 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			120 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			116 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			}
+			117 = {
+				add_base_tax = 3
+				add_base_production = 3
+				add_base_manpower = 3
+			} 
+		}
+	}
+}
+
+country_event = { #Government event
+	id = flavor_redglades.3
+	title = flavor_redglades.3.t
+	desc = flavor_redglades.3.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #monarchy
+			name = "flavor_redglades.3.a"
+			A03 = { change_government = monarchy }
+			set_government_rank = 2
+			add_government_reform = feudalism_reform
+	}
+	option = { #monarchy
+			name = "flavor_redglades.3.b"
+			add_adm_power = 100
+	}
+}
+
+country_event = { #season devotion
+	id = flavor_redglades.4
+	title = flavor_redglades.4.t
+	desc = flavor_redglades.4.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #spring
+			name = "flavor_redglades.4.a"
+			117 = {
+				change_religion = spring_court
+				add_province_modifier = {
+					name = A03_aligned_faith
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = A03_spring
+				duration = -1
+			}
+	}
+	option = { #summer
+			name = "flavor_redglades.4.b"
+			118 = {
+				change_religion = summer_court
+				add_province_modifier = {
+					name = A03_aligned_faith
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = A03_summer
+				duration = -1
+			}
+	}
+	option = { #autumn
+			name = "flavor_redglades.4.c"
+			116 = {
+				change_religion = autumn_court
+				add_province_modifier = {
+					name = A03_aligned_faith
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = A03_autumn
+				duration = -1
+			}
+	}
+	option = { #winter
+			name = "flavor_redglades.4.e"
+			120 = {
+				change_religion = winter_court
+				add_province_modifier = {
+					name = A03_aligned_faith
+					duration = -1
+				}
+			}
+			add_country_modifier = {
+				name = A03_winter
+				duration = -1
+			}
+	}
+}
+
+country_event = { #new faith
+	id = flavor_redglades.5
+	title = flavor_redglades.5.t
+	desc = flavor_redglades.5.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #stick with tradition
+			name = "flavor_redglades.5.a"
+		add_country_modifier = {
+				name = A03_new_introspection
+				duration = 36500
+			}
+	}
+	option = { #embrace the season deities
+			name = "flavor_redglades.5.b"
+		country_event = { id = flavor_redglades.6 }
+		
+		add_country_modifier = {
+				name = A03_relgious_revival
+				duration = 9125
+			}
+	}
+}
+
+country_event = { #season devotion
+	id = flavor_redglades.6
+	title = flavor_redglades.6.t
+	desc = flavor_redglades.6.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #spring
+			name = "flavor_redglades.6.a"
+			115 = {
+				change_religion = spring_court
+			}
+			
+			set_ruler_religion = spring_court
+		set_heir_religion = spring_court
+		change_religion = spring_court
+			
+	}
+	option = { #summer
+			name = "flavor_redglades.6.b"
+			115 = {
+				change_religion = summer_court
+			}
+			
+			set_ruler_religion = summer_court
+		set_heir_religion = summer_court
+		change_religion = summer_court
+	}
+	option = { #autumn
+			name = "flavor_redglades.6.c"
+			115 = {
+				change_religion = autumn_court
+			}
+			
+			set_ruler_religion = autumn_court
+		set_heir_religion = autumn_court
+		change_religion = autumn_court
+			
+	}
+	option = { #winter
+			name = "flavor_redglades.6.e"
+			115 = {
+				change_religion = winter_court
+			}
+			
+			set_ruler_religion = winter_court
+		set_heir_religion = winter_court
+		change_religion = winter_court
+	}
+	
+	option = { #combo?
+			name = "flavor_redglades.6.f"
+			115 = {
+				change_religion = eordellon
+			}
+			
+			set_ruler_religion = eordellon
+		set_heir_religion = eordellon
+		change_religion = eordellon
+	}
+}
