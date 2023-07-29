@@ -4711,57 +4711,57 @@ kobold_avenged_on_barbarism = {
 
 kobold_hoard_1 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 0.2
+	trade_goods_size = 0.4
 }
 
 kobold_hoard_2 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 0.5
+	trade_goods_size = 1.0
 }
 
 kobold_hoard_3 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 0.75
+	trade_goods_size = 1.5
 }
 
 kobold_hoard_4 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 1
+	trade_goods_size = 2
 }
 
 kobold_hoard_5 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 1.5
+	trade_goods_size = 3
 }
 
 kobold_hoard_6 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 2
+	trade_goods_size = 4
 }
 
 kobold_hoard_7 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 2.5
+	trade_goods_size = 5
 }
 
 kobold_hoard_8 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 3
+	trade_goods_size = 6
 }
 
 kobold_hoard_9 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 4
+	trade_goods_size = 7
 }
 
 kobold_hoard_10 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 5
+	trade_goods_size = 8
 }
 
 kobold_hoard_11 = {
 	picture = "kobold_hoard"
-	trade_goods_size = 7.5
+	trade_goods_size = 10
 }
 
 the_dragon_gift = {

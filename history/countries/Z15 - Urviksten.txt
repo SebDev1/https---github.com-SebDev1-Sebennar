@@ -20,14 +20,6 @@ capital = 984
 		dip = 2
 		mil = 6
 		
-		leader = {
-			name = "Karl II Ebonfrost"	 # Name of the leader
-			type = general	   # Type of leader: general, admiral, explorer, conquistidor
-			fire = 0
-			shock = 6
-			manuever = 4
-			siege = 1
-		}
 	}
 	add_ruler_personality = strict_personality
 	add_ruler_personality = cruel_personality
