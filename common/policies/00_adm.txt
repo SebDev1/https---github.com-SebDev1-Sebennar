@@ -103,8 +103,11 @@ formalized_measures = {
 		full_idea_group = economic_ideas
 	}	
 
-	global_tax_modifier = 0.10
-	republican_tradition = 0.2
+	global_tax_modifier = 0.20
+	devotion = 0.5
+	legitimacy = 1.0
+	republican_tradition = 0.30
+	horde_unity = 1.0
 
 	ai_will_do = {
 		factor = 1

@@ -1,0 +1,866 @@
+##BranchStart 0
+V = {
+	slot = 1
+	generic = no
+	ai = yes
+	potential = {
+		tag = A03
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	A03_island_brothers = {
+		icon = mission_rb_grow_the_channel
+		required_missions {
+			A03_elven_influence
+		}
+		position = 2
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = A21 }
+				A21 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			OR = {
+				NOT = { exists = A21 }
+				A21 = { 
+					has_spy_network_from = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+			navy_size = 15
+		}
+		effect = {
+			venail_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_resettlement_program = {
+		icon = mission_settlers_north_america
+		required_missions {
+			A03_island_brothers
+		}
+		position = 3
+		provinces_to_highlight = {
+			area = venail_area
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			venail_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			93 = { NOT = { devastation = 1 } }
+			94 = { NOT = { devastation = 1 } }
+			127 = { NOT = { devastation = 1 } }
+			93 = { NOT = { unrest = 1 } }
+			94 = { NOT = { unrest = 1 } }
+			127 = { NOT = { unrest = 1 } }
+		}
+		effect = {
+			country_event = { id = flavor_redglades.2 }
+			add_country_modifier = {
+				name = A03_influx_elves
+				duration = 7300
+			}
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 0
+##BranchStart 1
+I = {
+	slot = 2
+	generic = no
+	ai = yes
+	potential = {
+		tag = A03
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	A03_elven_influence = {
+		icon = develop_the_south
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			treasury = 100
+			dip_power = 50
+		}
+		effect = {
+			add_treasury = -100
+			add_dip_power = -50
+			add_country_modifier = {
+				name = A03_elven_influence
+				duration = 9125
+			}
+			define_advisor = {
+			
+				type = spymaster
+				skill = 1
+				cost_multiplier = 0.75
+				culture = moon_elf
+				name = "Fri Deva"
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_lorent_connections = {
+		icon = friends_in_high_places
+		required_missions {
+			A03_elven_influence
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 67
+			}
+		}
+		trigger = {
+			OR = {
+				NOT = { exists = A01 }
+				A01 = {
+					has_opinion = {
+						who = ROOT
+						value = 100
+					}
+				}
+			}
+			OR = {
+				NOT = { exists = A01 }
+				A01 = { 
+					has_spy_network_from = {
+						who = ROOT
+						value = 25
+					}
+				}
+			}
+		}
+		effect = {
+			country_event = { id = flavor_redglades.1 }
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_rose_throne = {
+		icon = mission_empire
+		required_missions {
+			A03_lorent_connections
+		}
+		position = 3
+		provinces_to_highlight = {
+			OR = {
+				area = upper_bloodwine_area
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			upper_bloodwine_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			estate_loyalty = {
+				estate = estate_nobles
+				loyalty = 80
+			}
+			legitimacy_equivalent = 80
+			adm_power = 100
+		}
+		effect = {
+			add_adm_power = -100
+			add_prestige = 25
+			add_country_modifier = {
+				name = A03_rose_throne
+				duration = -1
+			}
+			country_event = { id = flavor_redglades.3 }
+			lower_bloodwine_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			eastern_winebay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			upper_winebay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			lower_winebay_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	##Mission End
+	##
+	
+	A03_master_lencenor = {
+		icon = avoid_fragmentation
+		required_missions {
+			A03_rose_throne
+			A03_sieze_wine
+		}
+		position = 3
+		provinces_to_highlight = {
+		region = lencenor_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			num_of_owned_provinces_with = {
+				value = 60
+				region = lencenor_region
+			}
+		}
+		effect = {
+			add_adm_power = 100
+			add_mil_power = 100
+			add_dip_power = 100
+			change_adm = 1
+			change_dip = 1
+			change_mil = 1
+		}
+	}
+}
+##BranchEnd 1
+##BranchStart 2
+E = {
+	slot = 3
+	generic = no
+	ai = yes
+	potential = {
+		tag = A03
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	A03_crush_horse = {
+		icon = mission_conquer_maharashtra
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				province_id = 87
+				province_id = 75
+				province_id = 92
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			87 = {
+				owned_by = ROOT
+			}
+			75 = {
+				owned_by = ROOT
+			}
+			92 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			deranne_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = A03_horse_influx
+				duration = 7300
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_path_coast = {
+		icon = mission_develop_nevas_port
+		required_missions {
+			A03_crush_horse
+		}
+		position = 2
+		provinces_to_highlight = {
+			area = deranne_area
+			NOT = { owned_by = ROOT }
+		}
+		trigger = {
+			deranne_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			navy_size = 5
+		}
+		effect = {
+			southroy_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			darom_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			shrouded_coast_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			add_country_modifier = {
+				name = A03_access_coast
+				duration = 10950
+			}
+			
+		}
+	}
+	##Mission End
+	##
+	
+	A03_sieze_wine = {
+		icon = prosper_in_piedmont
+		required_missions {
+			A03_path_coast
+		}
+		position = 3
+		provinces_to_highlight = {
+			country_or_non_sovereign_subject_holds = ROOT  
+			trade_goods = wine
+		}
+		trigger = {
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				trade_goods = wine
+				value = 15
+			}
+		}
+		effect = {
+			sorncost_vines_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			sornhills_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			southern_flats_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			
+		}
+	}
+	
+	A03_mercantile_economy = {
+		icon = dominant_economy
+		required_missions {
+			A03_sieze_wine
+			A03_human_contract
+		}
+		position = 5
+		provinces_to_highlight = {
+			province_id = 77
+			OR = {
+				NOT = { is_strongest_trade_power = ROOT }
+				NOT = {
+					trade_share = {
+						country = A03
+						share = 75
+					}
+				}
+			}
+		}
+		trigger = {
+			
+			77 = { is_strongest_trade_power = ROOT }
+			77 = {
+				trade_share = {
+					country = A03
+					share = 75
+				}
+			}
+			num_of_owned_provinces_with = {
+				value = 15
+				has_manufactory_trigger = yes
+			}
+			share_of_starting_income = 10
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = A03_mercantile_system
+				duration = 10950
+			}
+		add_mercantilism = 10
+		}
+	}
+}
+##BranchEnd 2
+##BranchStart 3
+M = {
+	slot = 4
+	generic = no
+	ai = yes
+	potential = {
+		tag = A03
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	A03_secure_passes = {
+		icon = mission_rein_in_the_velamas
+		required_missions {
+			
+		}
+		position = 1
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 77
+						province_id = 120
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { base_manpower = 5 }
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 77
+						province_id = 120
+					}
+					NOT = { has_fort_building_trigger = yes }
+				}
+			}
+		}
+		
+		trigger = {
+			77 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+			120 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+		}
+		effect = {
+			77 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+			120 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_elven_silk = {
+		icon = mission_dominate_home_trade_node
+		required_missions {
+			A03_secure_passes
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 115
+				province_id = 116
+				province_id = 117
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					num_free_building_slots = 1
+					OR = {
+						has_production_building_trigger = yes
+						trade_goods = gold
+					}
+					development = 20
+				}
+			}
+		}
+		trigger = {
+			treasury = 1000
+			115 = { 
+				owned_by = ROOT
+				num_free_building_slots = 1
+				OR = {
+					has_production_building_trigger = yes
+					trade_goods = gold
+				}
+				development = 20
+			}
+			116 = { 
+				owned_by = ROOT
+				num_free_building_slots = 1
+				OR = {
+					has_production_building_trigger = yes
+					trade_goods = gold
+				}
+				development = 20
+			}
+			117 = { 
+				owned_by = ROOT
+				num_free_building_slots = 1
+				OR = {
+					has_production_building_trigger = yes
+					trade_goods = gold
+				}
+				development = 20
+			}
+		}
+		effect = {
+			115 = {
+				add_building_construction = {
+					building = textile
+					speed = 1
+					cost = 0.60
+				}
+			}
+			116 = {
+				add_building_construction = {
+					building = textile
+					speed = 1
+					cost = 0.60
+				}
+			}
+			117 = {
+				add_building_construction = {
+					building = textile
+					speed = 1
+					cost = 0.60
+				}
+			}
+		}
+	}
+	##Mission End
+	##
+	
+	A03_forest_works = {
+		icon = mission_alone_in_the_wood
+		required_missions {
+			A03_elven_silk
+		}
+		position = 3
+		provinces_to_highlight = {
+		OR = {
+			province_id = 115
+			province_id = 116
+			province_id = 117
+			province_id = 118
+			province_id = 120
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+			
+		}
+		trigger = {
+			redglades_area = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			adm_power = 100
+			mil_power = 100
+			dip_power = 100
+			stability = 2
+			has_adm_advisor_3 = yes
+			has_dip_advisor_3 = yes
+			has_mil_advisor_3 = yes
+		}
+		effect = {
+		add_adm_power = -100
+		add_mil_power = -100
+		add_dip_power = -100
+			115 = {
+				if = {
+					limit = { NOT = { province_has_center_of_trade_of_level = 1 } }
+					center_of_trade = 1
+				}
+				else_if = {
+					limit = { province_has_center_of_trade_of_level = 3 }
+					add_base_tax = 1
+					add_base_production = 1
+				}
+				else = {
+					add_center_of_trade_level = 1
+				}
+				add_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+			116 = {
+				add_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+			118 = {
+				add_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+			117 = {
+				add_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+			120 = {
+				add_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	A03_human_contract = {
+		icon = mission_vedic_education
+		required_missions {
+			A03_sieze_wine
+			A03_forest_works
+		}
+		position = 4
+		provinces_to_highlight = {
+		
+		}
+		trigger = {
+			high_tolerance_human_race_trigger = yes
+			num_of_owned_provinces_with = {
+						value = 10
+						OR = {
+							culture = high_lorentish
+						}
+					}
+			num_of_owned_provinces_with = {
+						value = 10
+						OR = {
+							culture = low_lorentish
+						}
+					}
+		}
+		effect = {
+			capital_scope = {
+				add_human_minority_size_effect = yes
+			}
+			add_country_modifier = {
+				name = A03_human_contract
+				duration = -1
+			}
+			
+		}
+	}
+	
+}
+##BranchEnd 3
+##BranchStart 4
+R = {
+	slot = 5
+	generic = no
+	ai = yes
+	potential = {
+		tag = A03
+	}
+	has_country_shield = yes
+	
+	##Mission Start
+	A03_four_seasons = {
+		icon = mission_jungle_pilgrim
+		required_missions {
+			
+		}
+		position = 2
+		provinces_to_highlight = {
+			OR = {
+				province_id = 116
+				province_id = 117
+				province_id = 118
+				province_id = 120
+			}
+			NOT = {
+				AND = {
+					owned_by = ROOT
+					OR = {
+						has_building = mage_tower
+					}
+					development = 1
+				}
+			}
+		}
+		trigger = {
+			116 = { 
+				has_building = mage_tower
+			}
+			117 = { 
+				has_building = mage_tower
+			}
+			118 = { 
+				has_building = mage_tower
+			}
+			120 = { 
+				has_building = mage_tower
+			}
+		}
+		effect = {
+			change_innovativeness = 8
+		}
+	}
+	
+	##Mission End
+	##Mission Start
+	A03_devotion = {
+		icon = mission_diplomacy_missive
+		required_missions {
+			A03_four_seasons
+		}
+		position = 3
+		provinces_to_highlight = {
+			##PROVINCESHIGHLIGHTCODE
+		}
+		trigger = {
+			has_institution = new_world_i
+			estate_loyalty = {
+				estate = estate_mages
+				loyalty = 70
+			}
+		}
+		effect = {
+			country_event = { id = flavor_redglades.4 }
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_new_faith = {
+		icon = bavarian_cultural_dominance
+		required_missions {
+			A03_devotion
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+			province_id = 115										
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			owns = 115
+			stability = 3
+			estate_loyalty = {
+				estate = estate_church
+				loyalty = 80
+			}
+			has_estate_privilege = estate_church_religious_delegation
+			has_estate_privilege = estate_church_administrative_privileges
+		}
+		effect = {
+			country_event = { id = flavor_redglades.5 }
+		}
+	}
+	##Mission End
+	##Mission Start
+	A03_4_seasons = {
+		icon = mission_protect_white_sea_trade
+		required_missions {
+			A03_new_faith
+		}
+		position = 5
+		provinces_to_highlight = {
+			OR = {
+				area = sornhills_area
+				area = upper_bloodwine_area
+				area = lorentish_approach_area
+				area = dragonhills_area
+			}
+		}
+		trigger = {
+			sornhills_area = {
+				type = all
+				owned_by = ROOT
+			}
+			upper_bloodwine_area = {
+				type = all
+				owned_by = ROOT
+			}
+			lorentish_approach_area = {
+				type = all
+				owned_by = ROOT
+			}
+			dragonhills_area = {
+				type = all
+				owned_by = ROOT
+			}
+			total_development = 1000
+		}
+		effect = {
+			add_country_modifier = {
+				name = A03_mastry_4_seasons
+				duration = -1
+			}
+		}
+	}
+	##Mission End
+	##
+	
+}
+##BranchEnd 4

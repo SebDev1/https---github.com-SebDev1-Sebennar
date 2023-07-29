@@ -5,6 +5,7 @@ kheterata_western_expansion = {
 	ai = yes
 	potential = {
 		tag = U01
+		tag = U02
 	}
 	has_country_shield = yes
 
@@ -435,6 +436,7 @@ kheterata_eastern_expansion = {
 	ai = yes
 	potential = {
 		tag = U01
+		tag = U02
 	}
 	has_country_shield = yes
 	
@@ -690,6 +692,7 @@ kheterata_colonial_missions = {
 	ai = yes
 	potential = {
 		tag = U01
+		tag = U02
 	}
 	has_country_shield = yes
 	
@@ -1003,6 +1006,7 @@ kheterata_aelantir_missions = {
 	ai = yes
 	potential = {
 		tag = U01
+		tag = U02
 	}
 	has_country_shield = yes
 
@@ -1199,6 +1203,7 @@ kheterata_economic_missions = {
 	ai = yes
 	potential = {
 		tag = U01
+		tag = U02
 	}
 	has_country_shield = yes
 	

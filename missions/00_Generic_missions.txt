@@ -306,7 +306,7 @@ generic_column_4 = {
 		effect = {
 			add_country_modifier = {
 				name = new_scholars
-				duration = -1
+				duration = 18250
 			}
 		}
 	}
