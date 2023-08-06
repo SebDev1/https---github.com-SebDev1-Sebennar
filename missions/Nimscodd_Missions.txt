@@ -4,23 +4,19 @@ nimscodd_blank_4 = {
     ai = yes
     has_country_shield = yes
     potential = {
-		OR = {
         tag = A06
-		tag = a79 
+		tag = A79
     }
 }
-}
-nimscodd_blank_5 = {
+nimscodd_blank_2 = {
     slot = 5
     generic = no
     ai = yes
     has_country_shield = yes
     potential = {
-		OR = {
         tag = A06
-		tag = a79 
+		tag = A79
     }
-}
 }
 nimscodd_1 = {
 	slot = 1
@@ -140,7 +136,7 @@ nimscodd_1 = {
 			}
 			OR = {
 				NOT = { culture_group = gnomish }
-				NOT = { owned_by = ROOT }
+				NOT = { is_state_core = ROOT }
 			}
 		}
 		
@@ -154,19 +150,28 @@ nimscodd_1 = {
 				}
 				197 = {
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 				200 = {
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 				694 = {
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			}
 			else = {
 				dip_power = 100
+				197 = {
+					is_state_core = ROOT
+				}
+				200 = {
+					is_state_core = ROOT
+				}
+				694 = {
+					is_state_core = ROOT
+				}
 			}
 		}
 		
@@ -449,7 +454,7 @@ hierarchy_1 = {
 	}
 	
 	hierarchy_expand_noo_widdechand = {
-		icon = mission_settlers_north_america
+		icon = mission_trollsbay
 		position = 17
 		required_missions = {
 			hierarchy_establish_noo_widdechand
@@ -580,7 +585,7 @@ nimscodd_2 = {
 							}
 							OR = {
 								NOT = { culture_group = gnomish }
-								NOT = { owned_by = ROOT }
+								NOT = { is_state_core = ROOT }
 							}
 						}
 						AND = {
@@ -588,13 +593,13 @@ nimscodd_2 = {
 								NOT = { has_country_modifier = racial_pop_kobold_expulsion }
 								NOT = { has_country_modifier = racial_pop_kobold_purge }
 							}
-							NOT = { owned_by = ROOT }
+							NOT = { is_state_core = ROOT }
 						}
 					}
 				}
 				AND = {
 					province_id = 169
-					NOT = { owned_by = ROOT }
+					NOT = { is_state_core = ROOT }
 				}
 			}
 		}
@@ -609,26 +614,26 @@ nimscodd_2 = {
 				}
 				170 = {
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 				dragondowns_area = {
 					type = all
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			}
 			else = {
 				dip_power = 100
 				170 = {
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 				dragondowns_area = {
 					type = all
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			}
 			169 = {
-				owned_by = ROOT
+				is_state_core = ROOT
 			}
 		}
 		
@@ -695,7 +700,7 @@ nimscodd_2 = {
 							}
 							OR = {
 								NOT = { culture_group = gnomish }
-								NOT = { owned_by = ROOT }
+								NOT = { is_state_core = ROOT }
 							}
 						}
 						AND = {
@@ -703,13 +708,13 @@ nimscodd_2 = {
 								NOT = { has_country_modifier = racial_pop_kobold_expulsion }
 								NOT = { has_country_modifier = racial_pop_kobold_purge }
 							}
-							NOT = { owned_by = ROOT }
+							NOT = { is_state_core = ROOT }
 						}
 					}
 				}
 				AND = {
 					province_id = 169
-					NOT = { owned_by = ROOT }
+					NOT = { is_state_core = ROOT }
 				}
 			}
 		}
@@ -725,18 +730,18 @@ nimscodd_2 = {
 				dragonpoint_area = {
 					type = all
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			}
 			else = {
 				dip_power = 100
 				dragonpoint_area = {
 					type = all
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			}
 			169 = {
-				owned_by = ROOT
+				is_state_core = ROOT
 			}
 		}
 		
@@ -807,7 +812,7 @@ hierarchy_2 = {
 		
 		effect = {
 			add_country_modifier = {
-				name = A79_rebuild_oddansbay_modifier
+				name = hierarchy_rebuild_oddansbay_modifier
 				duration = -1
 			}
 			177 = {
@@ -954,12 +959,12 @@ hierarchy_2 = {
 		position = 10
 		
 		trigger = {
-			adm_power = 25
+			adm_power = 150
 		}
 		
 		effect = {
-			add_adm_power = -25
-			remove_country_modifier = A79_rebuild_oddansbay_modifier
+			add_adm_power = -150
+			remove_country_modifier = hierarchy_rebuild_oddansbay_modifier
 		}
 	}
 	
@@ -1124,7 +1129,7 @@ nimscodd_3 = {
 		position = 1
 		
 		trigger = {
-			army_size_percentage = 1
+			army_size_percentage = 0.75
 		}
 		
 		effect = {
@@ -1274,7 +1279,7 @@ nimscodd_3 = {
 			area = dragonspine_area
 			OR = {
 				NOT = { culture_group = gnomish }
-				NOT = { owned_by = ROOT }
+				NOT = { is_state_core = ROOT }
 			}
 		}
 		
@@ -1289,7 +1294,7 @@ nimscodd_3 = {
 				dragonspine_area = {
 					type = all
 					culture_group = gnomish
-					owned_by = ROOT
+					is_state_core = ROOT
 				}
 			}
 			else = {
@@ -1468,7 +1473,14 @@ hierarchy_3 = {
 		}
 		
 		effect = {
-			ruby_mountains_area = {
+			west_ruby_mountains_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_ruby_mountains_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { is_permanent_claim = ROOT }
@@ -1493,12 +1505,17 @@ hierarchy_3 = {
 		position = 13
 		
 		provinces_to_highlight = {
-			area = ruby_mountains_area
+			area = west_ruby_mountains_area
+			area = east_ruby_mountains_area
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
 		trigger = {
-			ruby_mountains_area = {
+			west_ruby_mountains_area = {
+				type = all
+				country_or_non_sovereign_subject_holds =ROOT
+			}
+			east_ruby_mountains_area = {
 				type = all
 				country_or_non_sovereign_subject_holds =ROOT
 			}

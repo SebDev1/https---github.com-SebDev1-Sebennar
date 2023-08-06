@@ -2011,7 +2011,7 @@ B02_ideas = {
 #Blademarches Ideas
 B33_ideas = {
 	start = {
-		land_morale = 0.15
+		land_morale = 0.10
 		infantry_power = 0.1
 	}
 
@@ -7844,7 +7844,7 @@ B58_ideas = {
 
 	start = {
 		global_heretic_missionary_strength = 0.03
-		cavalry_power = 0.33
+		cavalry_power = 0.25
 	}
 
 	bonus = {
@@ -7859,7 +7859,7 @@ B58_ideas = {
 
 	B58_birthplace_of_chivalry = {	#The original knights
 		cavalry_flanking = 1
-		cav_to_inf_ratio = 0.2
+		cav_to_inf_ratio = 0.15
 	}
 	B58_sons_of_adean = {			#High morale
 		land_morale = 0.15

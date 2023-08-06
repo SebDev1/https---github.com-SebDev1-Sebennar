@@ -633,7 +633,7 @@ NCountry = {
 
 	ALLOW_FEMALE_GENERALS = 0,
 	FEMALE_ADVISOR_CHANCE = 10,						-- (Anbennar) pdx: 2. If Women in History is enabled, chance of an advisor (or general if permitted) spawning as female
-	MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.5,
+	MAX_IDEA_GROUPS_FROM_SAME_CATEGORY = 0.35,
 
 	RANDOM_LUCKY_BASE_WEIGHT = 100,					-- Base weight given to each nation when rolling for random lucky
 	RANDOM_LUCKY_DEVELOPMENT_WEIGHT = 0.4,			-- Extra weight given for each base development when rolling for random luck
@@ -1238,7 +1238,7 @@ NMilitary = {
 	ARMY_DRILL_YEARLY_GAIN = 10.0,					-- Gain from Drilling
 	ARMY_DRILL_MAX = 100.0,
 	ARMY_DRILL_MAX_MORALE = 0.5,
-	ARMY_DRILL_SKILL_MONTHS = 120,					-- The average number of months until you get a skill increase if drilling 100% of forcelimit. Set to 0 to disable.
+	ARMY_DRILL_SKILL_MONTHS = 108,					-- The average number of months until you get a skill increase if drilling 100% of forcelimit. Set to 0 to disable.
 
 	MAX_SAILOR_LACK_ATTRITION = 1,
 	SAILOR_MAINTAINANCE = 0.02,		-- of build cost.

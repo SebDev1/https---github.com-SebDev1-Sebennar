@@ -1312,7 +1312,7 @@ civil_society_reform = {
 	}
 	icon = "tribal_civil_society"
 	modifiers = {
-		global_tax_modifier = 0.05
+		global_tax_modifier = 0.15
 		yearly_corruption = -0.05
 	}
 	ai = {

@@ -6402,7 +6402,7 @@ country_event = {
         ai_chance = { factor = 10 }
 		add_prestige = -5
 		reduce_legitimacy_small_effect = yes
-		add_years_of_income = 2
+		add_years_of_income = 1.5
 	}
 	
 	#Make it a touristic shit
