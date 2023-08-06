@@ -450,6 +450,11 @@ telgier_professional_armies = {
 	discipline = 0.05
 }
 
+A62_drill = {
+	drill_decay_modifier = -0.33
+	drill_gain_modifier = 0.50
+}
+
 #Gnomish Hierachy
 A79_rebuild_oddansbay_modifier = {
 	development_cost = -0.05
