@@ -234,7 +234,7 @@ modern_siege_weapons = {
 		full_idea_group = offensive_ideas
 	}
 	
-	siege_ability = 0.1
+	siege_ability = 0.20
 	leader_siege = 1
 
 	ai_will_do = {
@@ -658,7 +658,7 @@ foreign_conscription_centers = {
 	}	
 	
 	reinforce_cost_modifier = -0.20
-	military_tactics = 0.05
+	reinforce_speed = 0.15
 	
 	ai_will_do = {
 		factor = 1

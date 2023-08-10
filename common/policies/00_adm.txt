@@ -1100,8 +1100,8 @@ taxation_with_representation = {
 		full_idea_group = plutocracy_ideas
 	}
 	
-	production_efficiency = 0.1
-	global_manpower_modifier = 0.1
+	production_efficiency = 0.15
+	global_manpower_modifier = 0.15
 
 	ai_will_do = {
 		factor = 1
@@ -1142,8 +1142,8 @@ cultural_understanding = {
 		full_idea_group = spy_ideas
 	}	
 	
-	global_unrest = -1
-	rebel_support_efficiency = 0.25
+	global_unrest = -2
+	manpower_in_culture_group_provinces = 0.15
 	
 	ai_will_do = {
 		factor = 1
