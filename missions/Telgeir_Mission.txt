@@ -367,7 +367,7 @@ telgeir_column_2_dlc = {
 		
 		effect = {
 			add_country_modifier = {
-				name = telgeir_drill
+				name = A62_drill
 				duration = -1
 			}
 		}
@@ -980,7 +980,6 @@ telgeir_development = {
 		}
 		
 		trigger = {
-			has_institution = manufactories
 			911 = { #Telgeir
 				owned_by = ROOT
 				is_core = ROOT

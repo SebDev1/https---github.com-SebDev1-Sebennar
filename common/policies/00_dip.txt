@@ -834,7 +834,7 @@ record_keeping_act = {
 		full_idea_group = diplomatic_ideas
 	}
 
-	diplomats = 1
+	governing_capacity_modifier = 0.10
 	merc_maintenance_modifier = -0.15
 
 	ai_will_do = {
