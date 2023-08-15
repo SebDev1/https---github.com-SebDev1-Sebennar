@@ -2560,7 +2560,7 @@ dameria_reforged = {
 }
 
 damerian_army = {
-	infantry_power = 0.2
+	infantry_power = 0.10
 }
 
 dameria_safeguard_empire = {
@@ -6457,7 +6457,7 @@ blademarches_home_of_bladestewards = {
 }
 
 blademarches_bright_hussars = {
-	cav_to_inf_ratio = 0.25
+	cav_to_inf_ratio = 0.15
 	cavalry_shock = 0.25
 	cavalry_cost = 0.1
 }

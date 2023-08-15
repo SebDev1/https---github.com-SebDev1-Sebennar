@@ -347,8 +347,9 @@ country_event = {
 		name = magic_ruler.1.c
 		trigger = {
 			has_ruler_flag = abjuration_2
-			adm_power = 30
-			dip_power = 5
+			adm_power = 60
+			dip_power = 10
+			mil_power = 25 
 			NOT = { has_ruler_modifier = magic_ward_cooldown }
 		}
 		ai_chance = {

@@ -21,6 +21,6 @@ historical_friend = G97 #Vanbury Guild
 		birth_date = 1402.6.2
 		adm = 4
 		dip = 4
-		mil = 3
+		mil = 4
 	}
 }

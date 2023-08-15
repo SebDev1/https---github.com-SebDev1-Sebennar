@@ -401,10 +401,9 @@ age_of_reformation = {
 	
 	abilities = {
 	
-		ab_allow_religion_enforced = {
+		ab_Adminstration_enforced = {
 			effect = {
-				custom_tooltip = religion_enforced_edict
-				set_country_flag = religion_enforced_edict
+			
 			}
 			modifier = {
 			administrative_efficiency = 0.10

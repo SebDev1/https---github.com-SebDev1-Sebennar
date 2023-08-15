@@ -269,7 +269,7 @@ magic_realm_enchantment_modify_memories_overlook_national_blunders = {
 }
 
 magic_realm_enchantment_modify_memories_encourage_subservience = {
-	global_autonomy = -0.01
+	global_autonomy = -0.10
 	stability_cost_modifier = -0.25
 }
 
