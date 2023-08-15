@@ -560,7 +560,7 @@ economic_ideas = {
 	bureaucracy = {
 		global_tax_modifier = 0.10
 	}
-	organised_construction = {
+	new_construction = {
 		build_cost = -0.1
 	}
 	national_bank = {
@@ -871,7 +871,7 @@ administrative_ideas = {
 		governing_capacity_modifier = 0.25
 	}
 
-	organised_mercenary_payment = {
+	mercenary_focus = {
 		mercenary_cost = -0.10
 		mercenary_discipline = 0.05
 	}
@@ -889,7 +889,7 @@ administrative_ideas = {
 	organized_bureaucracy = {
 		adm_advisor_cost = -0.25
 	}
-	administrative_efficiency_idea = {
+	strong_advisors = {
 		advisor_pool = 1
 		global_autonomy = -0.05
 	}
