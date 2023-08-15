@@ -1464,7 +1464,7 @@ colonial_boost_act = {
 		full_idea_group = exploration_ideas 
 	}
 	
-	colony_development_boost = 1
+	global_colonial_growth = 20
 
 	effect = {}
 	removed_effect = {}
@@ -1716,7 +1716,7 @@ innovative_payment_techniques_act = {
 		full_idea_group = mercenary_ideas 
 	}
 	
-	mercenary_cost = -0.33
+	mercenary_cost = -0.20
 
 	effect = {}
 	removed_effect = {}

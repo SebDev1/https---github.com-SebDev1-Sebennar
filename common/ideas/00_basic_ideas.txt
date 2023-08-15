@@ -1034,7 +1034,7 @@ court_ideas = {
 	}
 	palace_of_splendor = {
 		monthly_splendor = 2 
-		estate_interaction_cooldown_modifier = -0.20
+		allow_client_states = yes 
 	}
 	court_embassies = {
 		possible_dip_policy = 1 
