@@ -2463,15 +2463,9 @@ doppelsoldner_reform = {
 		}
 	}
 	modifiers = {
-		mercenary_cost = -0.25
+		mercenary_discipline = 0.025 
 		possible_condottieri = 0.5
 		merc_leader_army_tradition = 0.25
-	}
-	conditional = {
-		allow = { has_dlc = "Domination" }
-		government_abilities = {
-			hessian_militarization_mechanic
-		}
 	}
 	custom_attributes = {
 		mercs_do_not_cost_army_professionalism = yes
