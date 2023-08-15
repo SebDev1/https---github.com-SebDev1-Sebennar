@@ -1974,8 +1974,8 @@ military_innovation_act = {
 		full_idea_group = innovativeness_ideas 
 	}
 	
-	mil_advisor_cost = -0.33
-	mil_tech_cost_modifier = -0.1
+	mil_advisor_cost = -0.20
+	mil_tech_cost_modifier = -0.05
 
 	effect = {}
 	removed_effect = {}
