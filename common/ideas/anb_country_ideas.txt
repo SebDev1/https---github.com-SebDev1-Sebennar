@@ -699,7 +699,7 @@ A19_ideas = {
 		improve_relation_modifier = 0.15
 	}
 	A19_artificer_sparkdrive_mk2 = {
-		fire_damage = 0.35
+		fire_damage = 0.40
 	}
 }
 
@@ -1613,7 +1613,7 @@ A58_ideas = {
 	}
 	A58_legacy_of_the_damerian_republic = {
 		land_forcelimit_modifier = 0.10
-		infantry_power = 0.10
+		infantry_power = 0.20
 	}
 	A58_anbenncost_the_city_of_the_worlds_desire = {
 		global_own_trade_power = 0.2
@@ -5757,9 +5757,11 @@ F49_ideas = {
 	}
 	F49_a_wink_and_a_smile = {
 		diplomatic_reputation = 2
+		morale_damage_received = -0.10 
 	}
 	F49_pillow_talk = {
 		spy_offence = 0.5
+		global_spy_defence = 0.10
 	}
 	F49_visiting_foreign_courts = {
 		diplomats = 1
@@ -5767,6 +5769,7 @@ F49_ideas = {
 	}
 	F49_winged_messengers = {
 		envoy_travel_time = -0.25
+		diplomatic_upkeep = 1 
 	}
 }
 
@@ -18984,13 +18987,14 @@ A31_ideas = {
 	free = yes
 
 	A31_elven_electorate = { #We are the representatives of all elves in the Empire, this requires us having good diplomats to more efficiently contact various realms in Anbennar
-		morale_damage_received = -0.05
+		morale_damage_received = -0.10
 	}
 	A31_memories_of_munas = { #Munas led elves to Cannor and we owe him for that. Legacy of this great navigator lives on in Moonhaven, as admirals and navigators spend more time on the sea than usual, being more willing to traverse great lengths
 		trade_steering = 0.10
 	}
 	A31_silverwoods = { #Moonhaven is located in Silverwoods, a forest in eastern Dameshead. Having access to its rich supply of wood allows Moonhaveners to build new ships easier and cheaper
 		drill_decay_modifier = -0.25
+		reinforce_speed = 0.10
  	}
 	A31_cannorian_homeland = { #Moonhaveners consider themselves fully Cannorian, being satisfied with their current position in the empire. As they recently became the last autonomous elven region in Anbennar the population became more willing to defend their homeland till the last man
 		global_autonomy = -0.05
@@ -22525,14 +22529,15 @@ U07_ideas = {
 	free = yes
 
 	U07_rule_of_the_whip = {
-		governing_capacity_modifier = 0.1
+		governing_capacity_modifier = 0.15
 	}
 	U07_scourge_of_all_seas = {
 		leader_naval_shock = 1
 		galley_power = 0.2
 	}
 	U07_vengeance_against_the_sorrowclaw = {
-		cavalry_power = 0.10
+		cav_to_inf_ratio = 0.15
+		cavalry_power = 0.15
 	}
 	U07_dog_corsairs = {
 		allowed_marine_fraction = 0.25
@@ -22545,7 +22550,7 @@ U07_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	U07_gnoll_on_the_dove_throne = {
-		province_warscore_cost = -0.2
+		province_warscore_cost = -0.15
 	}
 }
 

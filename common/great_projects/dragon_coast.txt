@@ -370,7 +370,7 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 			factor = 1000
 		}
 		province_modifiers = {
-			local_development_cost = -0.1
+			local_development_cost = -0.20
 			trade_goods_size = 0.5
 			trade_goods_size_modifier = 0.05
 		}
@@ -393,7 +393,7 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_development_cost = -0.2
+			local_development_cost = -0.40
 			trade_goods_size = 1
 			trade_goods_size_modifier = 0.1
 		}
@@ -419,7 +419,7 @@ kobildzan_kobildzex_guild_of_trapsmiths = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_development_cost = -0.3
+			local_development_cost = -0.60	
 			trade_goods_size = 1.5
 			trade_goods_size_modifier = 0.15
 		}
@@ -506,10 +506,11 @@ the_dragonhoard = {
 			factor = 1000
 		}
 		province_modifiers = {
-			local_development_cost = -0.1
+			local_development_cost = -0.05
 			trade_goods_size_modifier = 0.05
 		}
 		area_modifier = {
+		local_development_cost = -0.10
 		}
 		country_modifiers = {
 			loot_amount = 0.33
@@ -526,10 +527,11 @@ the_dragonhoard = {
 			factor = 2500
 		}
 		province_modifiers = {
-			local_development_cost = -0.2
+			local_development_cost = -0.10
 			trade_goods_size_modifier = 0.1
 		}
 		area_modifier = {
+		local_development_cost = -0.15
 		}
 		country_modifiers = {
 			loot_amount = 0.66
@@ -546,10 +548,11 @@ the_dragonhoard = {
 			factor = 5000
 		}
 		province_modifiers = {
-			local_development_cost = -0.3
+			local_development_cost = -0.15
 			trade_goods_size_modifier = 0.15
 		}
 		area_modifier = {
+		local_development_cost = -0.20
 		}
 		country_modifiers = {
 			loot_amount = 1

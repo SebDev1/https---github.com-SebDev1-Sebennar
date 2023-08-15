@@ -4211,7 +4211,7 @@ great_conqueror_personality = {
 	}
 
 	allow = {
-		ai = yes
+		ai = no
 	}
 	chance = {
 		modifier = {
