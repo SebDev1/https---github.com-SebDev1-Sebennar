@@ -3600,7 +3600,7 @@ country_event = {
 				}
 			}
 			
-			add_permanent_province_modifier = { name = expulsion_unrest_modifier duration = 18250 }
+			add_permanent_province_modifier = { name = expulsion_unrest_modifier duration = 9125 }
 		}
 			
 		medium_decrease_of_centaur_tolerance_effect = yes
