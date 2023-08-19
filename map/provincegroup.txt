@@ -838,3 +838,14 @@ amacimst_near_cursed_ones = {
 zyujyut_bokai_provinces = {
 	4835 4836 4837
 }
+
+#TPG changes
+
+A03_green_glade = {
+	31 19 22 41 40 57 30 42
+}
+
+A03_blue_glade = {
+	7 208 206 348 210 76
+}
+

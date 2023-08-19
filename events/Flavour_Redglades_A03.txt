@@ -365,3 +365,221 @@ country_event = { #season devotion
 		change_religion = eordellon
 	}
 }
+
+country_event = { #dwarven nut
+	id = flavor_redglades.7
+	title = flavor_redglades.7.t
+	desc = flavor_redglades.7.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	option = { #loot the hold
+			name = "flavor_redglades.7.a"
+		62 = {
+				add_base_tax = -8
+				add_base_production = -8
+				add_base_manpower = -8
+				add_devastation = 100
+				change_trade_goods = wool
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			add_years_of_income = 2
+			
+			hidden_effect = {
+			64 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			65 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			4343 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			4232 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			4241 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+		}
+	}
+	option = { #move the institute
+			name = "flavor_redglades.7.b"
+		62 = {
+				add_base_tax = -8
+				add_base_production = -8
+				add_base_manpower = -8
+				add_devastation = 100
+				change_trade_goods = wool
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			
+			115 = {
+				add_province_modifier = {
+					name =  A03_hummanity_institute
+					duration = -1
+				}
+			}
+			
+			
+			hidden_effect = {
+			64 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			65 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			4343 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			4232 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+			4241 = {
+				add_province_modifier = {
+					name =  dwarven_anger
+					duration = -1
+				}
+			}
+		}
+		
+	}
+	
+	option = { #allow them to stay
+			name = "flavor_redglades.7.c"
+		62 = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_core = ROOT
+			}
+		
+	}
+}
+
+country_event = { #Future Expansion
+	id = flavor_redglades.8
+	title = flavor_redglades.8.t
+	desc = flavor_redglades.8.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+	name = "flavor_redglades.8.a"
+		damescrown_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+	}
+	
+	option = {
+	name = "flavor_redglades.8.b"
+		dragon_coast_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+	}
+}
+
+country_event = { #Future Expansion
+	id = flavor_redglades.9
+	title = flavor_redglades.9.t
+	desc = flavor_redglades.9.d
+	picture = DIPLOMACY_eventPicture
+	
+	is_triggered_only = yes
+	fire_only_once = yes
+
+	trigger = {
+		#mission
+
+	}
+	
+	option = {
+	name = "flavor_redglades.9.a"
+		42 = {
+				change_trade_goods = tea
+			}
+			57 = {
+				change_trade_goods = tobacco
+			}
+			30 = {
+				change_trade_goods = tea
+			}
+			41 = {
+				change_trade_goods = spices
+			}
+			40 = {
+				change_trade_goods = tobacco
+			}
+			22 = {
+				change_trade_goods = tea
+			}
+			19 = {
+				change_trade_goods = spices
+			}
+			31 = {
+				change_trade_goods = tobacco
+			}
+	}
+	
+}

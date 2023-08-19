@@ -57,7 +57,7 @@ A03_winter = {
 }
 
 A03_aligned_faith = {
-	local_missionary_strength = -0.10
+	local_missionary_strength = -0.20
 	local_unrest = -10
 	local_tax_modifier = 1.00
 }
@@ -82,7 +82,7 @@ A03_mastry_4_seasons = {
 
 A03_human_contract = {
 	manpower_in_culture_group_provinces = 0.20
-	global_manpower_modifier = -0.1
+	global_manpower_modifier = -0.05
 	global_trade_goods_size_modifier = 0.05
 	global_unrest = -2
 }
@@ -91,4 +91,33 @@ A03_mercantile_system = {
 	global_own_trade_power = 0.25
 	production_efficiency = 0.25
 }
+
+dwarven_anger = {
+	local_unrest = 5
+}
+
+ A03_hummanity_institute = {
+	idea_cost = -0.05
+}
+
+A03_population_resettlement = {
+	local_culture_conversion_cost = -0.75
+	local_unrest = 10
+}
+
+A03_new_core = {
+	development_cost = -0.1
+	build_cost = -0.1
+}
+
+A03_onto_damesear = {
+	land_morale = 0.1
+	shock_damage = 0.1
+	fire_damage = 0.1
+}
+
+A03_greater_elven_population = {
+	manpower_recovery_speed = 0.2
+}
+
 

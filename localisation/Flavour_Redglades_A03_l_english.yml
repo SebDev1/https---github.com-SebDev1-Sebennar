@@ -44,6 +44,42 @@
  A03_mercantile_economy_desc:0 "Our industrial efforts over the past few years have been immense, it is time for the dividends to finally be paid."
  A03_forest_works_title:0 "Forest Works" 
  A03_forest_works_desc:0 "The Forest of Redglades has been our home for over 300 years, yet despite this they can still be very difficult to develope and travel through. We now finally have the resources to fully realize our homes potential."
+ A03_dwarf_nut_title:0 "The Dwarven Nut"
+ A03_dwarf_nut_desc:0 "Rubyhold is the last major bastion in Lencenor outside of our control. It has sat undisturbed for thousands of years, acquiring unknown treasures. These treasures could be put to better use than sitting in an old dusty mountain."
+ A03_march_small_country_title:0 "March on Small Country"
+ A03_march_small_country_desc:0 "The disunited realms of the small people are no match for our legions steel will. PREPARE TO MARCH"
+ A03_conquer_west_dameria_title:0 "Conquer West Dameria"
+ A03_conquer_west_dameria_desc:0 "Western Dameria is one half of the Empire of Anbennar, and with it falling under our control a strong message will be sent to the petty human kingdoms on the other side of the Dameshead."
+ A03_red_forest_title:0 "The Redglade"
+ A03_red_forest_desc:0 "Silk from further inside the forest is mostly used for export, however these fine materials could also support some textile production of our own."
+ A03_prep_north_title:0 "Prepare a Northern Glade"
+ A03_prep_north_desc:0 "The Elves of Cannor need to unfortuately live somewhat seperatly from their human subjects, as resentment and incidents can boil over. That is why a remote forest is the best place for our new Elven First projects to take place."
+ A03_settle_north_title:0 "Settle the Blueglade"
+ A03_settle_north_desc:0 "The haflings have been 'relocated' to a better place and Elven settlers can move into there natural enviroment."
+ A03_north_forest_works_title:0 "Blueglade Forest Works"
+ A03_north_forest_works_desc:0 "The frigid forests of Northern Small Country can be a hard place to make a home, therefore we must make the enviroment better suite our future developements."
+ A03_north_forest_industry_title:0 "The Blueglades Specialization"
+ A03_north_forest_industry_desc:0 "The forests in the North have hundreds of small rivers and streams flowing through them into the Dameshead. This will inform our local magnates on what goods they should begin specializing in."
+ A03_north_forest_passes_title:0 "Blueglade Passes"
+ A03_north_forest_passes_desc:0 "Forest for us are more than homes, they are fortresses and in order to serve that purpose we must secure the main passages through the forest."
+ 
+ A03_prep_south_title:0 "Prepare a Southern Glade"
+ A03_prep_south_desc:0 "The Elves of Cannor need to unfortuately live somewhat seperatly from their human subjects, as resentment and incidents can boil over. That is why a remote forest is the best place for our new Elven First projects to take place."
+ A03_settle_south_title:0 "Settle the Greenglade"
+ A03_settle_south_desc:0 "The humans have been 'relocated' to the coastal cities and Elven settlers can move into there natural enviroment."
+ A03_south_forest_works_title:0 "Greenglade Forest Works"
+ A03_south_forest_works_desc:0 "The warm and wet Forests of Southern Dameria are the perfect setting for our future agricultural endavors."
+ A03_south_forest_industry_title:0 "The Greenglades Specialization"
+ A03_south_forest_industry_desc:0 "The forests of the South get lots of rain and remain without frost for almost the entire year. Therefore more exotic crops can be grown in the forest, given our expertise."
+ A03_south_forest_passes_title:0 "Greenglades Passes"
+ A03_south_forest_passes_desc:0 "Forest for us are more than homes, they are fortresses and in order to serve that purpose we must secure the main passages through the forest."
+ 
+ A03_elven_population_boom_title:0 "Elven Population Boom"
+ A03_elven_population_boom_desc: "With vast new lands opening up for our Elven people, a population boom has begun. This will prove useful to our otherwise barren race."
+ 
+ 
+ 
+ #Modifiers
  
  A03_elven_influence: "Elven Influence"
  A03_horse_influx: "Influx of Fine Horses"
@@ -60,6 +96,16 @@
  A03_new_introspection: "New Sense of Introspection"
  A03_relgious_revival: "Religious Revival"
  A03_mastry_4_seasons: "Mastry of All 4 Seasons"
+ A03_human_contract: "Human Contract"
+ A03_mercantile_system: "Mercantile System"
+ dwarven_anger: "Dwarven Unrest"
+ A03_hummanity_institute: "Humanities Institute"
+ A03_population_resettlement: "Population Resettlement"
+ A03_new_core: "New Elven Core"
+ A03_onto_damesear: "March on Damesear"
+ A03_greater_elven_population: "Increased Elven Population"
+
+#Events
 
  flavor_redglades.1.t:0 "The Kingdom of Lorent Has a New Claimant"
  flavor_redglades.1.d:0 "We the Elves of Redglades have always had a close relationship to Lorent, ever sense our kinswomen Ioriel married the King of Lorent. It is time for that recently broken relationship to be 'solidified'."
@@ -95,3 +141,19 @@
  flavor_redglades.6.e:0 "The Winter Court"
  flavor_redglades.6.f:0 "All of Them"
  
+ flavor_redglades.7.t:0 "The Fate of Rubyhold"
+ flavor_redglades.7.d:0 "The Dwarven Nut, a fortress that has stood in the mountains for nearly 3,000 years has finally been cracked. What do we do with the fruit inside?"
+ flavor_redglades.7.a:0 "Loot the Hold"
+ flavor_redglades.7.b:0 "Move the Institute"
+ flavor_redglades.7.c:0 "Leave the Dwarves as is"
+ 
+ flavor_redglades.8.t:0 "Future Expansion"
+ flavor_redglades.8.d:0 "Our Domain over western Cannor has been secured, yet the ich for future expansion never truly abates. Where should we start drawing up plans for the next attack."
+ flavor_redglades.8.a:0 "The Dameshead is Ripe"
+ flavor_redglades.8.b:0 "The Dragon Coast is weak"
+ 
+ dwarf_a_tt:0 "The rest of the Dwarves will remember this"
+ 
+ #Province groups
+ A03_green_glade:0 "The Greenglade"
+ A03_blue_glade:0 "The Blueglade"
