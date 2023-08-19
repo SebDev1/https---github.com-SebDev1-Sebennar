@@ -84,6 +84,139 @@ V = {
 	##Mission End
 	##
 	
+	A03_dwarf_nut = {
+		icon = mission_horse_siege
+		required_missions {
+			A03_rose_throne
+		}
+		position = 4
+		provinces_to_highlight = {
+			OR = {
+				province_id = 62
+			}
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			62 = {
+				owned_by = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = flavor_redglades.7 }
+			custom_tooltip = dwarf_a_tt
+			exwes_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			wesdam_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			carneteria_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	A03_march_small_country = {
+		icon = mission_unite_home_region
+		required_missions {
+			A03_master_lencenor
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = small_country_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			small_country_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			country_event = { id = flavor_redglades.8 }
+		}
+	}
+	
+	A03_north_forest_passes = {
+		icon = mission_rein_in_the_velamas
+		required_missions {
+			A03_settle_north
+		}
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 7
+						province_id = 76
+						province_id = 210
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { base_manpower = 5 }
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 7
+						province_id = 76
+						province_id = 210
+					}
+					NOT = { has_fort_building_trigger = yes }
+				}
+			}
+		}
+		
+		trigger = {
+			7 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+			76 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+			210 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+		}
+		effect = {
+			7 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+			76 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+			210 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+		}
+	}
 }
 ##BranchEnd 0
 ##BranchStart 1
@@ -237,7 +370,7 @@ I = {
 			A03_rose_throne
 			A03_sieze_wine
 		}
-		position = 3
+		position = 4
 		provinces_to_highlight = {
 		region = lencenor_region
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -255,6 +388,176 @@ I = {
 			change_adm = 1
 			change_dip = 1
 			change_mil = 1
+			small_country_region = {
+				limit = {
+					NOT = {
+						owned_by = ROOT
+						is_core = ROOT
+					}
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	A03_conquer_west_dameria = {
+		icon = mission_cossack_cavalry
+		required_missions {
+			A03_master_lencenor
+		}
+		position = 5
+		provinces_to_highlight = {
+			region = west_dameshead_region
+			NOT = { country_or_non_sovereign_subject_holds = ROOT }
+		}
+		trigger = {
+			west_dameshead_region = {
+				type = all
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+		}
+		effect = {
+			add_country_modifier = {
+				name = A03_onto_damesear
+				duration = 7300
+			}
+			west_damesear_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+			east_damesear_area = {
+				limit = {
+					NOT = { is_core = ROOT }
+					NOT = { is_permanent_claim = ROOT }
+				}
+				add_permanent_claim = ROOT
+			}
+		}
+	}
+	
+	A03_prep_north = {
+		icon = mission_rb_colonise_canada
+		required_missions {
+			A03_red_forest
+		}
+		position = 8
+		provinces_to_highlight = {
+			province_group = A03_blue_glade
+		}
+		trigger = {
+			A03_blue_glade = {
+				type = all
+				NOT = { unrest = 1 }
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+		}
+		effect = {
+			A03_blue_glade = {
+				add_permanent_province_modifier = {
+					name = A03_population_resettlement
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	A03_settle_north = {
+		icon = mission_levantine_restoration
+		required_missions {
+			A03_prep_north
+		}
+		position = 9
+		provinces_to_highlight = {
+			province_group = A03_blue_glade
+		}
+		trigger = {
+			
+			A03_blue_glade = {
+				type = all
+				culture_group = elven
+			}
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = A03_new_core
+				duration = 3650
+			}
+		}
+	}
+	
+	A03_north_forest_works = {
+		icon = mission_alone_in_the_wood
+		required_missions {
+			A03_settle_north
+		}
+		position = 10
+		provinces_to_highlight = {
+			province_group = A03_blue_glade
+			OR = {
+				NOT = { development = 15 }
+				devastation = 1
+			}
+		}
+		trigger = {
+			A03_blue_glade = {
+				type = all
+				development = 15
+				NOT = { devastation = 1 }
+			}
+			
+			
+		}
+		effect = {
+			A03_blue_glade = {
+				add_permanent_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	A03_north_forest_industry = {
+		icon = mission_rb_build_furnaces
+		required_missions {
+			A03_north_forest_works
+			A03_north_forest_passes
+		}
+		position = 11
+		provinces_to_highlight = {
+			province_group = A03_blue_glade
+		}
+		trigger = {
+			
+			A03_blue_glade = {
+				type = all
+				development = 20
+				has_production_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+		}
+		effect = {
+			208 = {
+				change_trade_goods = fish
+			}
+			206 = {
+				change_trade_goods = fish
+			}
+			210 = {
+				change_trade_goods = naval_supplies
+			}
+			348 = {
+				change_trade_goods = damestear
+			}
+			76 = {
+				change_trade_goods = naval_supplies
+			}
 		}
 	}
 }
@@ -440,9 +743,92 @@ E = {
 		effect = {
 			add_country_modifier = {
 				name = A03_mercantile_system
-				duration = 10950
+				duration = 18250
 			}
-		add_mercantilism = 10
+		add_mercantilism = 5
+		}
+	}
+	
+	A03_red_forest = {
+		icon = mission_green_village
+		required_missions {
+			
+		}
+		position = 7
+		provinces_to_highlight = {
+			OR = {
+				province_id = 120
+				province_id = 118
+				
+			}
+		}
+		trigger = {
+			treasury = 200
+			dip_power = 200
+			
+		}
+		effect = {
+			add_treasury = -200
+			add_dip_power = -200
+			120 = {
+			change_trade_goods = cloth
+			}
+			118 = {
+			change_trade_goods = cloth
+			}
+		}
+	}
+	
+	A03_elven_population_boom = {
+		icon = mission_raid_on_genoa
+		required_missions {
+			A03_south_forest_industry
+			A03_north_forest_industry
+		}
+		position = 12
+		provinces_to_highlight = {
+			OR = {
+			area = lorentish_approach_area
+			area = woodwell_area
+			}
+		}
+		trigger = {
+			treasury = 2000
+			mil_power = 200
+			dip_power = 200
+			adm_power = 200
+			manpower = 50
+			
+			lorentish_approach_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 50
+				}
+			}
+			woodwell_area = {
+				country_or_non_sovereign_subject_holds = ROOT
+				num_of_units_in_province = {
+					who = ROOT
+					type = infantry
+					amount = 50
+				}
+			}
+			
+		}
+		effect = {
+			add_treasury = -2000
+			add_mil_power = -200
+			add_dip_power = -200
+			add_adm_power = -200
+			add_manpower = -50
+			
+			add_country_modifier = {
+				name = A03_greater_elven_population
+				duration = -1
+			}
+			
 		}
 	}
 }
@@ -610,7 +996,6 @@ M = {
 			province_id = 118
 			province_id = 120
 			}
-			NOT = { country_or_non_sovereign_subject_holds = ROOT }
 			
 		}
 		trigger = {
@@ -712,7 +1097,141 @@ M = {
 		}
 	}
 	
+	A03_prep_south = {
+		icon = mission_junnagadh_fort
+		required_missions {
+			A03_red_forest
+		}
+		position = 8
+		provinces_to_highlight = {
+			province_group = A03_green_glade
+		}
+		trigger = {
+			A03_green_glade = {
+				type = all
+				NOT = { unrest = 1 }
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+		}
+		effect = {
+			A03_green_glade = {
+				add_permanent_province_modifier = {
+					name = A03_population_resettlement
+					duration = 7300
+				}
+			}
+		}
+	}
+	
+	A03_settle_south = {
+		icon = mission_levantine_restoration
+		required_missions {
+			A03_prep_south
+		}
+		position = 9
+		provinces_to_highlight = {
+			province_group = A03_green_glade
+		}
+		trigger = {
+			
+			A03_green_glade = {
+				type = all
+				culture_group = elven
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+		}
+		effect = {
+			add_country_modifier = {
+				name = A03_new_core
+				duration = 3650
+			}
+		}
+	}
+	
+	A03_south_forest_works = {
+		icon = mission_alone_in_the_wood
+		required_missions {
+			A03_settle_south
+		}
+		position = 10
+		provinces_to_highlight = {
+			province_group = A03_green_glade
+			OR = {
+				NOT = { development = 15 }
+				devastation = 1
+			}
+		}
+		trigger = {
+			A03_green_glade = {
+				type = all
+				development = 15
+				NOT = { devastation = 1 }
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+			
+		}
+		effect = {
+			A03_green_glade = {
+				add_permanent_province_modifier = {
+					name = A03_forest_works
+					duration = -1
+				}
+			}
+		}
+	}
+	
+	A03_south_forest_industry = {
+		icon = mission_rb_build_furnaces
+		required_missions {
+			A03_south_forest_works
+			A03_south_forest_passes
+		}
+		position = 11
+		provinces_to_highlight = {
+			province_group = A03_green_glade
+		}
+		trigger = {
+			
+			A03_green_glade = {
+				type = all
+				development = 20
+				has_production_building_trigger = yes
+				country_or_non_sovereign_subject_holds = ROOT
+			}
+			
+		}
+		effect = {
+			42 = {
+				change_trade_goods = tea
+			}
+			57 = {
+				change_trade_goods = tobacco
+			}
+			30 = {
+				change_trade_goods = tea
+			}
+			41 = {
+				change_trade_goods = spices
+			}
+			40 = {
+				change_trade_goods = tobacco
+			}
+			22 = {
+				change_trade_goods = tea
+			}
+			19 = {
+				change_trade_goods = spices
+			}
+			31 = {
+				change_trade_goods = tobacco
+			}
+		}
+	}
 }
+
 ##BranchEnd 3
 ##BranchStart 4
 R = {
@@ -861,6 +1380,75 @@ R = {
 	}
 	##Mission End
 	##
+	
+	A03_south_forest_passes = {
+		icon = mission_rein_in_the_velamas
+		required_missions {
+			A03_settle_south
+		}
+		position = 10
+		provinces_to_highlight = {
+			OR = {
+				AND = {
+					OR = {
+						province_id = 42
+						province_id = 19
+						province_id = 41
+					}
+					OR = {
+						NOT = { owned_by = ROOT }
+						NOT = { base_manpower = 5 }
+					}
+				}
+				AND = {
+					OR = {
+						province_id = 42
+						province_id = 19
+						province_id = 41
+					}
+					NOT = { has_fort_building_trigger = yes }
+				}
+			}
+		}
+		
+		trigger = {
+			42 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+			19 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+			41 = {
+				owned_by = ROOT
+				has_fort_building_trigger = yes
+				base_manpower = 5
+			}
+		}
+		effect = {
+			42 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+			19 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+			41 = {
+				add_permanent_province_modifier = {
+					name = A03_pass_fortifications
+					duration = -1
+				}
+			}
+		}
+	}
 	
 }
 ##BranchEnd 4
