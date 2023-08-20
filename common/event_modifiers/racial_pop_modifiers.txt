@@ -2146,12 +2146,12 @@ racial_focus_lizardfolk = {
 }
 
 expulsion_unrest_modifier = {
-	local_manpower_modifier = -0.33
-	local_tax_modifier = -0.33
-	local_production_efficiency = -0.33
+	local_manpower_modifier = -0.25
+	local_tax_modifier = -0.25
+	local_production_efficiency = -0.25
 }
 purge_unrest_modifier = {
-	local_manpower_modifier = -0.50
-	local_tax_modifier = -0.50
-	local_production_efficiency = -0.50
+	local_manpower_modifier = -0.40
+	local_tax_modifier = -0.40
+	local_production_efficiency = -0.40
 }
