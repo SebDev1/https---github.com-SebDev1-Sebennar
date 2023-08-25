@@ -1367,9 +1367,9 @@ bjarnrik4_missions = {
 			northern_greatwoods_area = { add_claim = ROOT }
 			dinesck_area = { add_claim = ROOT }
 			west_chillsbay_area = { add_claim = ROOT }
-			add_adm_power = 25
-			add_dip_power = 25
-			add_mil_power = 25
+			add_adm_power = 100
+			add_dip_power = 100
+			add_mil_power = 100
 		}
 	}
 	
@@ -1530,7 +1530,7 @@ bjarnrik4_missions = {
 					NOT = {
 						ROOT = {
 							num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
-								value = 12
+								value = 24
 								region = alenic_frontier_region
 							}
 						}
@@ -1542,9 +1542,6 @@ bjarnrik4_missions = {
 		trigger = {
 			owns_or_non_sovereign_subject_of = 221
 			is_great_power = yes
-			A13 = {
-				NOT = { is_great_power = yes }
-			}
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				value = 12
 				region = alenic_frontier_region
@@ -1563,6 +1560,10 @@ bjarnrik4_missions = {
 			add_adm_power = 100
 			add_dip_power = 100
 			add_mil_power = 100
+			add_country_modifier = {
+				name = eagle_slayers
+				duration = -1 
+			}
 		}
 	}
 	
@@ -1580,7 +1581,7 @@ bjarnrik4_missions = {
 			religion = skaldhyrric_faith
 			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
 				religion = skaldhyrric_faith
-				value = 150
+				value = 100
 			}
 		}
 		
@@ -1785,6 +1786,11 @@ bjarnrik5_missions = {
 				add_permanent_claim = ROOT
 			}
 			add_country_modifier = { name = "bjarnrik_olavlund" duration = 18250 }
+			
+			add_country_modifier = {
+				name = Z08_faith_secured
+				duration = -1 
+			}
 		}
 	}
 	
@@ -1881,7 +1887,7 @@ bjarnrik5_missions = {
 		}
 		
 		effect = {
-			add_country_modifier = { name = "bjarnrik_savior_of_the_east" duration = 18250 }
+			add_country_modifier = { name = "bjarnrik_savior_of_the_east" duration = -1 }
 			add_prestige = 25
 			custom_tooltip = bjarnrik_end_graytide_tt
 			hidden_effect = {
@@ -1921,28 +1927,16 @@ bjarnrik5_missions = {
 		position = 9
 		
 		trigger = {
-			is_institution_enabled = enlightenment
-			OR = {
-				furnace = 2
-				calc_true_if = {
-					all_owned_province = {
-						has_manufactory_trigger = yes
-					}
-					amount = 25
-				}
+			num_of_owned_provinces_with = {
+				value = 25
+				has_manufactory_trigger = yes
 			}
 		}
 		
 		effect = {
 			add_country_modifier = {
-				name = "proto_industrialization"
-				duration = 9125
-			}
-			956 = {
-				add_institution_embracement = {
-					which = enlightenment
-					value = 50
-				}
+				name = Z08_proto_industry
+				duration = -1
 			}
 		}
 	}

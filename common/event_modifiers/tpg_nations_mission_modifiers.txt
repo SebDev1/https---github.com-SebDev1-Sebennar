@@ -488,6 +488,24 @@ A45_commanders = {
 	infantry_fire = -0.20
 }
 
+#Bjarnrik 
+
+Z08_proto_industry = {
+	production_efficiency = 0.15
+}
+
+Z08_faith_secured = {
+	tolerance_own = 2
+	global_missionary_strength = 0.01
+}
+
+Z08_eagle_slayers = {
+	shock_damage = 0.05
+	infantry_shock = 0.40
+	infantry_fire = -0.20
+}
+	
+
 #Generic
 
 war_of_last_resort = {

@@ -169,3 +169,8 @@
  A45_marshal_empire:0 "Marshal of The Empire"
  A45_commanders:0 "Istalori Commanders"
  A45_corinite_emporer:0 "Corinite Emporer"
+ 
+ #Bjarnrik
+ Z08_proto_industry:0 "Proto-Industrialization"
+ Z08_faith_secured:0 "Faith Secured"
+ Z08_eagle_slayers:0 "Eagle Slayers"
