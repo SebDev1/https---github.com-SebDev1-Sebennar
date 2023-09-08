@@ -1143,7 +1143,7 @@ cultural_understanding = {
 	}	
 	
 	global_unrest = -2
-	manpower_in_culture_group_provinces = 0.15
+	manpower_in_accepted_culture_provinces = 0.15
 	
 	ai_will_do = {
 		factor = 1
