@@ -14146,6 +14146,7 @@ H82_ideas = {
 
 	bonus = {
 		movement_speed = 0.1
+		fire_damage = 0.10 
 	}
 
 	trigger = {
@@ -14168,7 +14169,7 @@ H82_ideas = {
 	}
 	H82_crimson_price = {
 		land_maintenance_modifier = -0.1
-		global_regiment_recruit_speed = -0.25
+		land_morale = 0.15 
 	}
 	H82_serpentbloom_cartels = {
 		trade_efficiency = 0.1

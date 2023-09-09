@@ -1982,7 +1982,7 @@ exploring_the_frontiers = {
 		has_reform = adventurer_reform
 	}
 	modifiers = {
-		global_colonial_growth = 0.15 
+		global_colonial_growth = 15 
 	}
 }
 
