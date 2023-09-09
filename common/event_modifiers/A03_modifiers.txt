@@ -81,7 +81,7 @@ A03_mastry_4_seasons = {
 }
 
 A03_human_contract = {
-	manpower_in_culture_group_provinces = 0.20
+	manpower_in_accepted_culture_provinces = 0.20
 	global_manpower_modifier = -0.05
 	global_trade_goods_size_modifier = 0.05
 	global_unrest = -2
