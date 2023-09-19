@@ -2632,16 +2632,16 @@ A93_ideas = {
 	free = yes		#will be added at load.
 
 	A93_the_pinklady_band = {	#estalleni mercenary group
-		mercenary_cost = -0.15
-		mercenary_discipline = 0.05
+		mercenary_cost = -0.20
+		mercenary_discipline = 0.075
 	}
 	A93_estalleni_ladies_of_pleasure = {
 		spy_offence = 0.1
 		diplomatic_upkeep = 1
 	}
 	A93_crossroads_of_the_empire = {
-		num_accepted_cultures = 1
-		envoy_travel_time = -0.25
+		num_accepted_cultures = 2
+		manpower_in_accepted_culture_provinces = 0.33
 	}
 	A93_water_garden_district = {
 		prestige = 1
@@ -2651,8 +2651,8 @@ A93_ideas = {
 		global_trade_goods_size_modifier = 0.1
 	}
 	A93_protectors_of_the_esmar = {
-		defensiveness = 0.1
-		trade_steering = 0.10
+		defensiveness = 0.20
+		land_morale = 0.10
 	}
 	A93_estallen_party_fee = {
 		global_tax_modifier  = 0.2
