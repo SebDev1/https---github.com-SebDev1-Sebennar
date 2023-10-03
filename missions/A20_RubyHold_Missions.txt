@@ -976,7 +976,7 @@ Rubyhold_3 = {
 			}
 		}
 		trigger = {
-			A16 = {
+			A17 = {
 				OR = {
 					AND = {
 						is_subject_of = ROOT
@@ -996,7 +996,7 @@ Rubyhold_3 = {
 					NOT = { exists = yes }
 				}
 			}
-			A18 = {
+			A87 = {
 				OR = {
 					AND = {
 						is_subject_of = ROOT
