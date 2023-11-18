@@ -4,6 +4,7 @@ controller = R51
 add_core = R51
 culture = dhukharuved
 religion = high_philosophy
+center_of_trade = 1
 
 hre = no
 

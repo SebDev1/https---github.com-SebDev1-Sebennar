@@ -3,6 +3,7 @@ controller = Y36
 add_core = Y36
 culture = sikai
 religion = righteous_path
+center_of_trade = 1
 
 hre = no
 

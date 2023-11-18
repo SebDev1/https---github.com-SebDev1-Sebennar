@@ -5,6 +5,7 @@ controller = R78
 add_core = R78
 culture = shamadhan
 religion = high_philosophy
+center_of_trade = 1
 
 hre = no
 

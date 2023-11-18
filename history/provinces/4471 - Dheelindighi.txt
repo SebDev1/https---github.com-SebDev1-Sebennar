@@ -5,6 +5,7 @@ controller = R13
 add_core = R13
 culture = ghavaanaj
 religion = high_philosophy
+center_of_trade = 1
 
 hre = no
 

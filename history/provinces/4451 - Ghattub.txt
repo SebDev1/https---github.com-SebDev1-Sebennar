@@ -6,6 +6,7 @@ add_core = R33
 add_core = R07
 culture = sobhagand
 religion = high_philosophy
+center_of_trade = 1
 
 hre = no
 
