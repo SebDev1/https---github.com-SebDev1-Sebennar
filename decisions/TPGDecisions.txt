@@ -1,0 +1,34 @@
+country_decisions = {
+
+
+	mechanical_drugs = {
+		major = yes
+		potential = {
+			tag = F23
+			has_ruler_flag = servator_online
+		}
+		provinces_to_highlight = {
+		
+		}
+		
+		allow = {
+			adm_power = 75
+			dip_power = 75
+			num_of_provinces_owned_or_owned_by_non_sovereign_subjects_with = {
+				trade_goods = incense
+				development = 20
+				value = 2
+			}
+		}
+		
+		effect = {
+			add_adm_power = -75
+			add_dip_power = -75
+			add_country_modifier = {
+				name = F23_drugged_population
+				duration = 3650
+			}
+		}
+	
+	}
+}
