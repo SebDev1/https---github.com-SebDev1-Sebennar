@@ -45,7 +45,7 @@ country_event = {
 				}
 			}
 			define_heir = {
-				age = 31
+				age = 30
 				hidden = yes
 				female = yes
 			}
