@@ -35,7 +35,7 @@ gawed_column_1 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			dames_forehead_area = {
+			uelaire_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -60,7 +60,7 @@ gawed_column_1 = {
 		provinces_to_highlight = {
 			OR = {
 				area = lorentish_approach_area
-				area = dames_forehead_area
+				area = uelaire_area
 				area = norley_area
 			}
 			NOT = { country_or_non_sovereign_subject_holds = ROOT }
@@ -71,7 +71,7 @@ gawed_column_1 = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
-			dames_forehead_area = {
+			uelaire_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -406,7 +406,7 @@ gawed_column_1 = {
 	# gawed_gawedi_wars_of_religion = {
 		# icon = influence_the_church
 		# required_missions = {  }
-		# position = 9
+		# position = 11
 		
 		# trigger = {
 		
@@ -535,7 +535,7 @@ gawed_column_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			dames_forehead_area = {
+			uelaire_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -665,13 +665,6 @@ gawed_column_2 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			silent_repose_area = {
-				limit = {
-					NOT = { is_core = ROOT }
-					NOT = { owned_by = ROOT }
-				}
-				add_permanent_claim = ROOT
-			}
 			add_country_modifier = {
 				name = A13_damescrown_loan
 				duration = 7300
@@ -690,7 +683,6 @@ gawed_column_2 = {
 					OR = {
 						area = north_ibevar_area
 						area = south_ibevar_area
-						area = silent_repose_area
 					}
 					NOT = { country_or_non_sovereign_subject_holds = ROOT }
 				}
@@ -707,10 +699,6 @@ gawed_column_2 = {
 				country_or_non_sovereign_subject_holds = ROOT
 			}
 			south_ibevar_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
-			silent_repose_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
 			}
@@ -1471,7 +1459,7 @@ gawed_column_4 = {
 				}
 				add_permanent_claim = ROOT
 			}
-			giants_manse_area = {
+			vaengrheim_area = {
 				limit = {
 					NOT = { is_core = ROOT }
 					NOT = { owned_by = ROOT }
@@ -1788,15 +1776,6 @@ gawed_column_5 = {
 		}
 		
 		effect = {
-			drowned_giant_isles_area = {
-				limit = {
-					NOT = {
-						owned_by = ROOT
-						is_core = ROOT
-					}
-				}
-				add_permanent_claim = ROOT
-			}
 			east_chillsbay_area = {
 				limit = {
 					NOT = {
@@ -1861,7 +1840,6 @@ gawed_column_5 = {
 		
 		provinces_to_highlight = {
 			OR = {
-				area = drowned_giant_isles_area
 				area = east_chillsbay_area
 				area = wudhal_area
 				area = sondaar_area
@@ -1873,10 +1851,6 @@ gawed_column_5 = {
 		}
 		
 		trigger = {
-			drowned_giant_isles_area = {
-				type = all
-				country_or_non_sovereign_subject_holds = ROOT
-			}
 			east_chillsbay_area = {
 				type = all
 				country_or_non_sovereign_subject_holds = ROOT
@@ -1979,7 +1953,7 @@ gawed_column_5 = {
 		}
 		
 		effect = {
-			gerudian_coast_region = {
+			gerudian_frontier_region = {
 				limit = {
 					NOT = {
 						owned_by = ROOT
@@ -1998,17 +1972,7 @@ gawed_column_5 = {
 		position = 6
 		
 		provinces_to_highlight = {
-			OR = {
 				superregion = gerudia_superregion
-					NOT = {
-						ROOT = {
-							num_of_owned_provinces_with = {
-								value = 70
-								superregion = gerudia_superregion
-							}
-						}
-					}
-				}
 				NOT = { country_or_non_sovereign_subject_holds = ROOT }
 		}
 		
