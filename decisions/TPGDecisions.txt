@@ -31,4 +31,178 @@ country_decisions = {
 		}
 	
 	}
+	
+	korashi_supply = {
+		major = yes
+		potential = {
+			tag = R62
+			NOT = { exists = Y01 }
+			current_age = age_of_discovery
+			NOT = { has_country_flag = korashi_fix }
+
+		}
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		allow = {
+			adm_power = 50
+			dip_power = 50
+		}
+		
+		effect = {
+			add_adm_power = -50
+			add_dip_power = -50
+			command_change_korashi_supply = { increase = yes }
+			command_change_korashi_supply = { increase = yes }
+			command_change_korashi_supply = { increase = yes }
+			command_change_korashi_supply = { increase = yes }
+			command_change_korashi_supply = { increase = yes }
+			set_country_flag = korashi_fix
+		}
+	}
+	
+	spawn_thunderfist = {
+		major = yes
+		potential = {
+			tag = R62
+			owns = 4521 
+			owns = 4517
+			owns = 4522 
+			owns = 4516 
+			NOT = { exists = R63 }
+			NOT = { has_country_flag = thunderfist_fix }
+
+		}
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+			R63 = { 
+				every_core_province = {
+					limit = {
+						NOT = {
+							area = munlanan_area
+						}
+					}
+					remove_core = R63
+				}
+			}
+		release = R63
+		create_subject = {
+			subject_type = slave_state
+			subject = R63
+			}
+			R63 = {
+			change_religion = old_dookan
+			}
+			set_country_flag = thunderfist_fix
+		}
+	}
+	
+	spawn_bloodsong = {
+		major = yes
+		potential = {
+			tag = R62
+			owns = 4624 
+			owns = 4628
+			owns = 4627 
+			NOT = { exists = R64 }
+			NOT = { has_country_flag = bloodsong_fix }
+
+		}
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+			R64 = { 
+				every_core_province = {
+					limit = {
+						NOT = {
+							area = yodhilakra_area
+						}
+					}
+					remove_core = R64
+				}
+			}
+		release = R64
+		create_subject = {
+			subject_type = slave_state
+			subject = R64
+			}
+			R64 = {
+			change_religion = old_dookan
+			}
+			set_country_flag = bloodsong_fix
+		}
+	}
+	
+	enslave_stolengem = {
+		major = yes
+		potential = {
+			tag = R62
+			R66 = {
+				is_subject_of = ROOT
+					
+				}
+			NOT = { has_country_flag = stolengem_fix}
+			}
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+		create_subject = {
+			subject_type = slave_state
+			subject = R66
+			}
+			set_country_flag = stolengem_fix
+		}
+	}
+	
+	enslave_blackstep = {
+		major = yes
+		potential = {
+			tag = R62
+			R65 = {
+				is_subject_of = ROOT
+					
+				}
+			NOT = { has_country_flag = blackstep_fix}
+			}
+		
+		provinces_to_highlight = {
+		
+		}
+		
+		allow = {
+			
+		}
+		
+		effect = {
+		create_subject = {
+			subject_type = slave_state
+			subject = R65
+			}
+			set_country_flag = blackstep_fix
+		}
+	}
 }

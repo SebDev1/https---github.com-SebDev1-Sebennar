@@ -174,3 +174,66 @@
  Z08_proto_industry:0 "Proto-Industrialization"
  Z08_faith_secured:0 "Faith Secured"
  Z08_eagle_slayers:0 "Eagle Slayers"
+ 
+ #The Command
+ R62_repopulate_holds_title:0 "Repopulate The Jade Mines"
+ R62_repopulate_holds_desc:0 "The Dwarves of Verkal Dromak are resurgent pushing us out of our traditional homeland. This process must be reversed."
+ R62_consolidate_gains_title:0 "Consolidate Gains"
+ R62_consolidate_gains_desc:0 "Our victories againist the Northern Kingdoms of Shamakhad were staggering at first, but continued human resistance has erroded most of our gains. We must secure our foothold and prepare for the next strike."
+ R62_goblin_subjects_title:0 "Goblin Subjects"
+ R62_goblin_subjects_desc:0 "With Verkal Dromak resurgent our slave goblins finally got the chance they had been waiting for to break free from our grasp. While temporarily weakened, we shall show them that their exit was premature."
+ korashi_supply_title:0 "Korashi Supply"
+ korashi_supply_desc:0 "Will prevent the mage disaster if Haless is deleted."
+ spawn_thunderfist_title:0 "Spawn Thunderfist"
+ spawn_thunderfist_desc:0 "Will recreate Thunderfist as a slave state."
+ spawn_bloodsong_title:0 "Spawn Bloodsong"
+ spawn_bloodsong_desc:0 "Will recreate Bloodsong as a slave state."
+ enslave_stolengem_title:0 "Enslave Stolen Gem"
+ enslave_stolengem_desc:0 "Will turn Stolen Gem into a slave state."
+ enslave_blackstep_title:0 "Enslave Blackstep"
+ enslave_blackstep_desc:0 "Will turn Blackstep into a slave state."
+
+ splendor_into_power_title:0 "Invest Splendor"	
+ splendor_into_power_desc:0 "Invest splendor to develop our nation"
+
+ #idea changes 
+ strictier_enforcement:0 "Stricter Enforcement"
+ strictier_enforcement_desc:0 "No man shall be spared from our armies as long as they can walk and breathe. We will not tolerate any more excuses."
+
+ peaceful_exploitation:0 "Peaceful Exploitation"
+ peaceful_exploitation_desc:0 "Our leaders have found a way to exploit the vulnerable and make those dirty peasants follow our every will at a cheaper wage."
+
+ nonpeaceful_exploitation:0 "Nonpeaceful Exploitation"
+ nonpeaceful_exploitation_desc:0 "We have found a way to exploit the war resources of every area domestic and local. This may make some of the peasants a bit unhappy but as long as they know what's good for them it won't matter."
+
+ glorious_rulers:0 "Glorious Rulers"
+ glorious_rulers_desc:0 "Exploitation has led to glory for those that follow our glorious leaders the peasants and people may suffer but the strength of our country is forever glorious."
+
+ slave_tax_collectors:0 "Slave Tax Collectors"
+ slave_tax_collectors_desc:0 "Our slaves can be used to collect tithes more efficiently. All kinds of races can be of use as slaves through this process even the dumb orcs. "
+
+ efficient_assimilation:0 "Efficient Assimilation"
+ efficient_assimilation_desc:0 "Assimilating is tough for many people, but not for our country we have found ways to aid in this process whether through peaceful or violent means."
+
+ quicker_assimilation:0 "Quicker Assimilation"
+ quicker_assimilation_desc:0 " Streamlining the process of assimilation has allowed us to change the populace of any area quicker than most other nations."
+ exploitation_ideas:0 "Exploitation Ideas"
+
+ #parliament decision 
+ add_all_provinces_to_seats_title:0 "Add all seats to parliament"
+ add_all_provinces_to_seats_desc:0 "Add all seats to parliament"
+ add_all_provinces_parliament_seats_tt:0 "Add all seats to parliament"
+
+ #Qol
+ Qol_enable_Qualtiy_of_life_title:0 "Quality of Life Decisions"
+ Qol_enable_Qualtiy_of_life_desc:0 "Enables the ability to turn off all state edicts and to enable all state edicts."
+ Qol_enable_Qols:0 "Has not enabled Qol"
+ Qol_disable_Qualtiy_of_life_title:0 "Disable quality of life"
+ Qol_disable_Qualtiy_of_life_desc:0 " Disables quality of life decision"
+ Qol_disable_Qols:0 "Has not disabled Qol"
+ disable_all_state_edicts_title:0 "Disables all state edicts"
+ disable_all_state_edicts_desc:0 "Disables all state edicts. Note this works after a month tick."
+ disable_all_state_edicts_tooltip:0 "Has not disabled all state edicts."
+ allow_all_state_edicts_title:0 "Allow all state edicts"
+ allow_all_state_edicts_desc:0 "Allow all state edicts."
+ allow_all_state_edicts_tooltip:0 " Has not allowed all state edicts."
